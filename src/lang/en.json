@@ -1,0 +1,146 @@
+{
+  "navbar": {
+    "title1": "Gomore Products",
+    "content1-1": "A.I. Coach Program",
+    "content1-2": "Exercise and Health Indicators",
+    "content1-3": "Signal Conversion",
+    "title2": "Gomore Commercial Applications",
+    "content2-1": "Smart Wearables",
+    "content2-2": "Fitness Equipments",
+    "content2-3": "Compound Solutions",
+    "title3": "News",
+    "title4": "About Us",
+    "title5": "Contact Us"
+  },
+  "commercial": {
+    "section1": {
+      "title": "Smart Wearables",
+      "content1": "GoMore integrates fitness and health algorithms into a variety of intelligent wearable devices. These algorithms allow us to acquire biological signals that are used to analyze user daily activities and physiological indicators.",
+      "content2": "We use Bluetooth Low Energy (BLE) standards to transmit raw data and calculated indicators from the device to various application platforms. This allows us to accommodate diverse user demands and meet the needs of our client's fitness and health products.",
+      "card": {
+        "title1": "Smart Watches and Bands",
+        "content1": "Smart watches and bracelets can monitor and manage personal health after integrating with GoMore's various fitness and health algorithms. For example, use the watch app as a guide for workout programs or daily health monitoring such as fall detection, stress levels, sleep quality, etc.",
+        "title2": "Smart Rings",
+        "content2": "GoMore sleep analysis indicators can be easily integrated into smart rings and bluetooth headsets. When paired with a mobile app, users can access their sleep status, sleep stage distribution and sleep scores.",
+        "title3": "Bluetooth Headsets",
+        "content3": "GoMore sleep analysis indicators can be easily integrated into smart rings and bluetooth headsets. When paired with a mobile app, users can access their sleep status, sleep stage distribution and sleep scores."
+      }
+    },
+    "section2": {
+      "title": "Fitness Equipments",
+      "content1": "GoMore can integrate A.I. Coach programs into traditional fitness equipment, allow users to receive real-time coaching during cardio exercise sessions.",
+      "content2": "The A.I. Coach motivates users, engages users with training goals and reduces the risk of injury and overtraining.",
+      "card": {
+        "title1": "Treadmills",
+        "content1": "A treadmill combined with GoMore Fat Burn Coach allows users to safely complete their running training program and achieve effective calorie-burning results through intelligent coaching guidance.",
+        "title2": "Spin bike",
+        "content2": "Spin bikes combined with GoMore A.I. Coach guides users through various stages of training that will enhance aerobic and anaerobic capacity and improve cycling performance.",
+        "title3": "Elliptical machine",
+        "content3": "An elliptical machine combined with GoMore Elliptical Coach provides users with a variety of training programs that enhance cardiovascular function, burn calories and build muscle strength."
+      }
+    },
+    "section3": {
+      "title": "Compound Solutions",
+      "content": "GoMore provides integrated solutions for wearable devices and application platforms that improve product design flexibility and ensure health products meet user needs.",
+      "card": {
+        "title1": "A.I. With Edge Computing",
+        "content1-1": "The GoMore algorithms use wearable device sensors to acquire physiological signals, detect motion, and analyze position and speed to accurately assess user fitness and health status.",
+        "content1-2": "Together with the mobile app user interface, we provide better intelligent coaching content and user experience, allowing users to review their exercise records and check their complete health trend.",
+        "title2": "Cloud Service Application",
+        "content2-1": "GoMore algorithms can be integrated into a variety of wearable devices enabling 24/7 monitoring of health indicators.",
+        "content2-2": "When connected to the cloud server via the Internet, these indicators can be aggregated into long-term health monitoring reports, allowing users to easily track their long-term health trends."
+      }
+    }
+  },
+  "product": {
+    "section1": {
+      "title": "A.I. Coach Program",
+      "content1": "GoMore A.I. Coach is a fitness app for people who care about personal exercise indicators of health.",
+      "content2": "The A.I. Coach generates a personalized exercise schedule to match your training goals, stamina reserve and recovery needs.",
+      "content3": "The coaching program prescribes appropriate exercise volumes and intensities while guiding you through a training program that improves performance and fitness while reducing injury risk.",
+      "card": {
+        "title1": "Fat Burn Coach",
+        "content1-1": "Users will lose weight and enhance their exercise capacity using the Fat Burn Coach.",
+        "content1-2": "The Fat Burn Coach dynamically adjusts the exercise program based on the user's exercise performance.",
+        "title2": "Running Coach",
+        "content2": "The Running Coach makes personalized recommendations and adjustments, guiding users through an exercise program that will increase their VO2max and improve their running performance.",
+        "title3": "Marathon Coach",
+        "content3-1": "GoMore collaborated with world-renowned coach Dr. Mujika to design the Marathon Coach program.",
+        "content3-2": "The Marathon Coach improves running performance and marathon running time.",
+        "title4": "Vitality Coach",
+        "content4": "The Vitality Coach program is for users with little to no exercise experience. This program guides users through light activities at their own pace to improve fitness and reduce cardiovascular disease risk.",
+        "title5": "Mixed Exercise Training",
+        "content5-1": "The Integrated-Fitness Coach program evaluates user upper body, lower body and core exercise ability with a quick and easy assessment.",
+        "content5-2": "The program then safely guides users through training sessions that improve cardiovascular fitness and strength, all without leaving their home.",
+        "title6": "Youth Coach",
+        "content6": "The Youth Coach is a training program aimed at improving sport and physical performance based assessments common among middle schools and high schools. This program guides teenagers through exercise sessions designed to improve their physical performance testing scores."
+      }
+    },
+    "section2": {
+      "title": "Exercise and Health Indicators",
+      "content1": "GoMore's algorithms produce a full range of scientifically validated wellness, fitness and sport performance indicators.",
+      "content2": "These indicators are used to produce visual reports that help you track your health and fitness to ensure you are achieving your long-term training goals.",
+      "card": {
+        "title1": "Running Indicators",
+        "content1-1": "Specialized indicators",
+        "content1-2": "VO2max",
+        "content1-3": "Personalized heart rate interval",
+        "content1-4": "Lactate threshold heart rate and pace",
+        "content1-5": "Running efficiency",
+        "content1-6": "Energy expenditure (Calories)",
+        "content1-7": "Energy source",
+        "content1-8": "Stamina",
+        "content1-9": "Training effect",
+        "content1-10": "Training load",
+        "content1-11": "Load trend",
+        "content1-12": "Explanatory indicators",
+        "content1-13": "Stamina level",
+        "content1-14": "Training status",
+        "content1-15": "Recovery time",
+        "content1-16": "Running performance estimation",
+        "content1-17": "Fitness age",
+        "title2": "Cycling Indicators",
+        "content2-1": "Specialized indicators",
+        "content2-2": "VO2max",
+        "content2-3": "VO2peak power",
+        "content2-4": "Personalized heart rate zones",
+        "content2-5": "Functional threshold power",
+        "content2-6": "Energy expenditure (Calories)",
+        "content2-7": "Energy source",
+        "content2-8": "Stamina index",
+        "content2-9": "Training effect",
+        "content2-10": "Training load",
+        "content2-11": "Acute:Chronic Workload Ratio (ACWR)",
+        "content2-12": "Explanatory indicators",
+        "content2-13": "Cycling stamina level",
+        "content2-14": "Training status",
+        "content2-15": "Recovery time",
+        "title3": "Wellness Indicators",
+        "content3-1": "Specialized indicators",
+        "content3-2": "Sleep stage analysis and sleep score",
+        "content3-3": "Wake detection",
+        "content3-4": "Fall detection",
+        "content3-5": "Activity type detection",
+        "content3-6": "Personalized metabolic equivalent of tasks (METs)",
+        "content3-7": "Stress score",
+        "content3-8": "Stamina score",
+        "content3-9": "Energy expenditure and sources",
+        "content3-10": "Respiratory rate"
+      }
+    },
+    "section3": {
+      "title1": "Physiological Signal Processing",
+      "content": "Using the power of GoMore fitness and wellness algorithms, our scientists and engineers convert physiological signals into meaningful and digestible indicators. Some of these physiological signals include Photoplethysmography (PPG), Accelerometer (ACC), Gyroscope (Gyro), and Electrocardiogram (ECG).",
+      "title2": "Signal Indicators",
+      "card": {
+        "title1": "Heart rate",
+        "title2": "Resting heart rate",
+        "title3": "Heart rate variability",
+        "title4": "ACC speed",
+        "title5": "GPS speed",
+        "title6": "Pace",
+        "title7": "Cadence"
+      }
+    }
+  }
+}
