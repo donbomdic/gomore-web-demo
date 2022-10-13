@@ -9,7 +9,8 @@
           <div class="section1-content">{{ $t("commercial.section1.content2") }}</div>
         </div>
         <div class="section1-img">
-          <img src="./assets/commercial-smart-title.png" alt="commercial-smart-tille" />
+          <img v-show="isMobile === 0" src="./assets/commercial-smart-title.png" alt="commercial-smart-tille" />
+          <img v-show="isMobile === 1" src="./assets/commercial-smart-title-mobile.png" alt="commercial-smart-tille" />
         </div>
       </div>
       <div class="section1-card-container">
@@ -38,7 +39,14 @@
               <img src="./assets/commercial-smart1.png" alt="commercial-smart1" />
             </div>
           </div>
-          <div v-show="count === 0" class="section1-card-content">{{ $t("commercial.section1.card.content1") }}</div>
+          <div v-show="count === 0" class="section1-card-content-wrapper">
+            <div class="section1-card-content">
+              {{ $t("commercial.section1.card.content1-1") }}
+            </div>
+            <div class="section1-card-content">
+              {{ $t("commercial.section1.card.content1-2") }}
+            </div>
+          </div>
         </div>
         <!-- Card 2 -->
         <div class="section1-card">
@@ -57,7 +65,14 @@
               <img src="./assets/commercial-smart2.png" alt="commercial-smart2" />
             </div>
           </div>
-          <div v-show="count === 1" class="section1-card-content">{{ $t("commercial.section1.card.content2") }}</div>
+          <div v-show="count === 1" class="section1-card-content-wrapper">
+            <div class="section1-card-content">
+              {{ $t("commercial.section1.card.content2-1") }}
+            </div>
+            <div class="section1-card-content">
+              {{ $t("commercial.section1.card.content2-2") }}
+            </div>
+          </div>
         </div>
         <!-- Card 3 -->
         <div class="section1-card">
@@ -76,14 +91,26 @@
               <img src="./assets/commercial-smart3.png" alt="commercial-smart3" />
             </div>
           </div>
-          <div v-show="count === 2" class="section1-card-content">{{ $t("commercial.section1.card.content3") }}</div>
+          <div v-show="count === 2" class="section1-card-content-wrapper">
+            <div class="section1-card-content">
+              {{ $t("commercial.section1.card.content3-1") }}
+            </div>
+            <div class="section1-card-content">
+              {{ $t("commercial.section1.card.content3-2") }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div id="section2">
       <div class="section2-introduction">
         <div class="section2-img">
-          <img src="./assets/commercial-fitness-title.png" alt="commercial-fitness-title" />
+          <img v-show="isMobile === 0" src="./assets/commercial-fitness-title.png" alt="commercial-fitness-title" />
+          <img
+            v-show="isMobile === 1"
+            src="./assets/commercial-fitness-title-mobile.png"
+            alt="commercial-fitness-title"
+          />
         </div>
         <div class="section2-line"></div>
         <div class="section2-content-container">
@@ -132,11 +159,12 @@
       <div class="section3-seperator">
         <div class="section3-seperator-title">{{ $t("commercial.section3.title") }}</div>
         <div class="section3-seperator-line"></div>
-        <div class="section3-seperator-content">{{ $t("commercial.section3.content") }}</div>
+        <div class="section3-seperator-content">{{ $t("commercial.section3.content1") }}</div>
+        <div class="section3-seperator-content">{{ $t("commercial.section3.content2") }}</div>
         <img src="./assets/commercial-solution-title.png" alt="commercial-solution-title" />
       </div>
       <div class="section3-container" style="background: #f8f8f8; color: #282828">
-        <img v-if="isMobile === 1" src="./assets/commercial-solution1.png" alt="commercial-solution1" />
+        <img v-if="isMobile === 1" src="./assets/commercial-solution1-mobile.png" alt="commercial-solution1" />
         <div class="section3-content">
           <div class="section3-content-no">01</div>
           <div class="section3-content-title">{{ $t("commercial.section3.card.title1") }}</div>
@@ -160,7 +188,7 @@
       </div>
       <!-- Mobile -->
       <div v-if="isMobile === 1" class="section3-container" style="background: #a51a23; color: #ffffff">
-        <img src="./assets/commercial-solution2.png" alt="commercial-solution2" />
+        <img src="./assets/commercial-solution2.png" alt="commercial-solution2-mobile" />
         <div class="section3-content">
           <div class="section3-content-no">02</div>
           <div class="section3-content-title">{{ $t("commercial.section3.card.title2") }}</div>
@@ -231,42 +259,54 @@ export default {
     #section1 {
       margin: 96px auto 0 auto;
       .section1-introduction {
-        max-width: 1004px;
+        max-width: 1084px;
         width: 100%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
         .section1-content-container {
+          margin-top: 30px;
+          max-width: 585px;
+          width: 100%;
           height: 588px;
           display: flex;
           flex-direction: column;
-          margin: 30px 96px 0 30px;
           .section1-title {
-            margin-top: 30px;
+            margin-bottom: 58px;
+            margin-right: 56px;
+            max-width: 529px;
+            width: 100%;
+            height: 51px;
             font-family: Arial Black;
             font-size: 36px;
             font-weight: 900;
             line-height: 51px;
             letter-spacing: 0em;
             text-align: left;
+            color: #282828;
           }
           .section1-line {
+            margin-top: 66px;
             position: absolute;
             width: 614px;
-            height: 1px;
-            margin-top: 96px;
+            height: 2px;
             background: #cf000e;
           }
           .section1-content {
+            max-width: 489px;
+            width: 100%;
+            height: 419px;
             font-family: DIN Alternate;
             font-size: 22px;
             font-weight: 700;
             line-height: 35px;
             letter-spacing: 0em;
             text-align: left;
-            margin-top: 43px;
           }
+        }
+        .section1-img {
+          max-width: 455px;
+          width: 100%;
+          height: 588px;
         }
       }
       .section1-card-container {
@@ -305,13 +345,13 @@ export default {
           margin: 360px auto auto auto;
         }
         .section1-card {
-          z-index: 12;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           .section1-card-main {
+            z-index: 15;
             margin-top: 131px;
             display: flex;
             flex-direction: column;
@@ -326,19 +366,27 @@ export default {
               color: #282828;
             }
             .section1-card-img {
-              z-index: 16;
               margin: 55px auto 0 auto;
             }
           }
-          .section1-card-content {
+          .section1-card-content-wrapper {
             max-width: 1028px;
-            font-family: DIN Alternate;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 37px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: #282828;
+            width: 100%;
+            height: 148px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .section1-card-content {
+              z-index: 15;
+              font-family: DIN Alternate;
+              font-size: 22px;
+              font-weight: 700;
+              line-height: 37px;
+              letter-spacing: 0em;
+              text-align: center;
+              color: #282828;
+            }
           }
         }
       }
@@ -406,8 +454,9 @@ export default {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          box-shadow: -3px 3px 5px rgba(89, 89, 89, 0.25);
+          box-shadow: -3px 3px 5px 0px #59595940;
           border-radius: 20px;
+          background: #f8f8f8;
           .section2-card-img {
             margin: 50px auto 0 31px;
             width: 60px;
@@ -441,8 +490,11 @@ export default {
         .section2-card:hover {
           width: 370px;
           height: 485px;
+
+          background: linear-gradient(0deg, #fffafa, #fffafa);
+
           border: 2px solid #cf000e;
-          box-shadow: -3px 3px 5px rgba(89, 89, 89, 0.25);
+          box-shadow: -3px 3px 5px 0px #59595940;
           border-radius: 20px;
           .section2-card-title {
             font-size: 24px;
@@ -478,12 +530,12 @@ export default {
         }
         .section3-seperator-line {
           margin-top: 15px;
+          margin-bottom: 45px;
           background: white;
           width: 414px;
           height: 1px;
         }
         .section3-seperator-content {
-          margin-top: 45px;
           max-width: 1021px;
           width: 100%;
           font-family: DIN Alternate;
@@ -496,6 +548,7 @@ export default {
         }
         img {
           position: absolute;
+          left: 0;
         }
       }
       .section3-container {
@@ -575,13 +628,14 @@ export default {
             line-height: 31px;
             letter-spacing: 0em;
             text-align: left;
+            color: #282828;
           }
           .section1-line {
             margin-top: 34px;
             margin-left: 32px;
             position: absolute;
             height: 378px;
-            border: 2px solid #cf000e;
+            border: 1.5px solid #cf000e;
           }
           .section1-content {
             margin-left: 54px;
@@ -592,6 +646,7 @@ export default {
             line-height: 20px;
             letter-spacing: 0em;
             text-align: left;
+            color: #282828;
             margin-top: 20px;
           }
         }
@@ -662,22 +717,31 @@ export default {
             }
             .section1-card-img {
               z-index: 15;
-              margin: 40px auto 0 auto;
+              height: 205px;
+              margin: 40px auto 40px auto;
               img {
                 width: 173px;
               }
             }
           }
-          .section1-card-content {
-            margin-top: 100px;
-            max-width: 90vw;
-            font-family: DIN Alternate;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: #282828;
+          .section1-card-content-wrapper {
+            z-index: 15;
+            height: 206px;
+            margin: auto 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .section1-card-content {
+              margin-top: 15px;
+              font-family: DIN Alternate;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0em;
+              text-align: center;
+              color: #282828;
+            }
           }
         }
       }
@@ -695,7 +759,7 @@ export default {
           margin-left: 32px;
           position: absolute;
           height: 300px;
-          border: 2px solid #cf000e;
+          border: 1.5px solid #cf000e;
         }
         .section2-content-container {
           height: 220px;
@@ -711,18 +775,17 @@ export default {
             line-height: 31px;
             letter-spacing: 0em;
             text-align: left;
+            color: #282828;
           }
 
           .section2-content {
-            margin-left: 54px;
-            margin-right: 25px;
+            margin: 20px 25px 0 54px;
             font-family: DIN Alternate;
             font-size: 16px;
             font-weight: 700;
             line-height: 20px;
             letter-spacing: 0em;
             text-align: left;
-            margin-top: 20px;
           }
         }
         .section2-img {
@@ -746,23 +809,22 @@ export default {
         .section2-card {
           cursor: pointer;
           margin: 0 36px 32px 36px;
-          width: 80vw;
           height: 330px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          box-shadow: -3px 3px 5px rgba(89, 89, 89, 0.25);
+          box-shadow: 1px 3px 6px 0px #59595940;
+          background: #f8f8f8;
           border-radius: 20px;
           .section2-card-img {
-            margin: 40px auto 0 31px;
-            width: 40px;
-            height: 40px;
-            padding: 10px;
-            border-radius: 10px;
-            background: #cf000e;
+            margin: 42px auto 0 22px;
             display: flex;
             justify-content: center;
             align-items: center;
+            img {
+              width: 45px;
+              height: 45px;
+            }
           }
           .section2-card-title {
             margin: 20px auto 0 22px;
@@ -776,6 +838,7 @@ export default {
           }
           .section2-card-content {
             margin: 15px 21px 0 22px;
+            height: 144px;
             font-family: DIN Alternate;
             font-size: 16px;
             font-weight: 700;
@@ -786,28 +849,27 @@ export default {
         }
         .section2-card-onclick {
           cursor: pointer;
-          margin: 0 30px 32px 30px;
-          width: 85vw;
+          margin: 0 31px 10px 31px;
           height: 360px;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          box-shadow: -3px 3px 5px rgba(89, 89, 89, 0.25);
+          box-shadow: 1px 3px 6px 0px #59595940;
           border-radius: 20px;
-          border: 2px solid #cf000e;
+          background: linear-gradient(0deg, #fffafa, #fffafa);
+          border: 1px solid #cf000e;
           .section2-card-img {
-            margin: 40px auto 0 31px;
-            width: 40px;
-            height: 40px;
-            padding: 10px;
-            border-radius: 10px;
-            background: #cf000e;
+            margin: 32px auto 0 27px;
             display: flex;
             justify-content: center;
             align-items: center;
+            img {
+              width: 45px;
+              height: 45px;
+            }
           }
           .section2-card-title {
-            margin: 20px auto 0 22px;
+            margin: 20px auto 0 27px;
             font-family: Arial Black;
             font-size: 24px;
             font-weight: 900;
@@ -817,13 +879,14 @@ export default {
             color: #cf000e;
           }
           .section2-card-content {
-            margin: 15px 21px 0 22px;
+            margin: 15px 27px 0 27px;
             font-family: DIN Alternate;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
-            line-height: 22px;
+            line-height: 26px;
             letter-spacing: 0em;
             text-align: left;
+            color: #282828;
           }
         }
       }
@@ -841,6 +904,7 @@ export default {
         align-items: center;
         .section3-seperator-title {
           margin-top: 54px;
+          margin-bottom: 22px;
           font-family: Arial Black;
           font-size: 22px;
           font-weight: 900;
@@ -848,10 +912,10 @@ export default {
           letter-spacing: 0em;
           text-align: center;
           color: #ffffff;
-          border-bottom: 2px solid white;
+          padding-bottom: 10px;
+          border-bottom: 1.5px solid white;
         }
         .section3-seperator-content {
-          margin-top: 33px;
           max-width: 90vw;
           width: 100%;
           font-family: DIN Alternate;
@@ -863,9 +927,9 @@ export default {
           color: #ffffff;
         }
         img {
-          width: 50vw;
-          left: 0;
-          bottom: 0;
+          width: 110vw;
+          margin-top: 100px;
+          margin-right: 60px;
           position: absolute;
         }
       }

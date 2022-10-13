@@ -6,7 +6,7 @@ import vueI18n from "@intlify/vite-plugin-vue-i18n";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/gomore-web-demo/",
+  // base: "/gomore-web-demo/",
   plugins: [
     vue(), // you need to install `@vitejs/plugin-vue`
     vueI18n({

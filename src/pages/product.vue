@@ -43,115 +43,129 @@
         <div class="section-content">{{ $t("product.section2.content1") }}</div>
         <div class="section-content">{{ $t("product.section2.content2") }}</div>
       </div>
-      <div class="section2-container">
-        <img class="left" src="./assets/product-left.png" alt="product-left" @click="carouselCount(-1)" />
-        <img class="right" src="./assets/product-right.png" alt="product-right" @click="carouselCount(1)" />
-        <!-- Card 1-->
-        <div v-show="count === 0" class="section2-card-container">
-          <div class="section2-carousel">
-            <img src="./assets/product-carousell1.png" alt="carousel1-1" />
-            <img src="./assets/product-carousell2.png" alt="carousel1-2" />
-            <img src="./assets/product-carousell2.png" alt="carousel1-3" />
-          </div>
-          <div class="section2-card">
-            <img class="section2-card-img" src="./assets/product-indicator1.png" alt="product-indicator1" />
-            <div class="section2-card-content-container">
-              <div class="section2-card-content">
-                <div class="section2-card-title">{{ $t("product.section2.card.title1") }}</div>
-                <div class="section2-card-subtitle">
-                  {{ $t("product.section2.card.content1-1") }}
+      <div class="section2-container-wrapper">
+        <div class="section2-container">
+          <img
+            v-show="count === 1 || count === 2"
+            class="left"
+            src="./assets/product-left.png"
+            alt="product-left"
+            @click="carouselCount(-1)"
+          />
+          <img
+            v-show="count === 0 || count === 1"
+            class="right"
+            src="./assets/product-right.png"
+            alt="product-right"
+            @click="carouselCount(1)"
+          />
+          <!-- Card 1-->
+          <div v-show="count === 0" class="section2-card-container">
+            <div class="section2-carousel">
+              <img src="./assets/product-carousell1.png" alt="carousel1-1" />
+              <img src="./assets/product-carousell2.png" alt="carousel1-2" />
+              <img src="./assets/product-carousell2.png" alt="carousel1-3" />
+            </div>
+            <div class="section2-card">
+              <img class="section2-card-img" src="./assets/product-indicator1.png" alt="product-indicator1" />
+              <div class="section2-card-content-container">
+                <div class="section2-card-content">
+                  <div class="section2-card-title">{{ $t("product.section2.card.title1") }}</div>
+                  <div class="section2-card-subtitle">
+                    {{ $t("product.section2.card.content1-1") }}
+                  </div>
+                  <ul>
+                    <li>{{ $t("product.section2.card.content1-2") }}</li>
+                    <li>{{ $t("product.section2.card.content1-3") }}</li>
+                    <li>{{ $t("product.section2.card.content1-4") }}</li>
+                    <li>{{ $t("product.section2.card.content1-5") }}</li>
+                    <li>{{ $t("product.section2.card.content1-6") }}</li>
+                    <li>{{ $t("product.section2.card.content1-7") }}</li>
+                    <li>{{ $t("product.section2.card.content1-8") }}</li>
+                    <li>{{ $t("product.section2.card.content1-9") }}</li>
+                    <li>{{ $t("product.section2.card.content1-10") }}</li>
+                    <li>{{ $t("product.section2.card.content1-11") }}</li>
+                  </ul>
+                  <div class="section2-card-subtitle">
+                    {{ $t("product.section2.card.content1-12") }}
+                  </div>
+                  <ul>
+                    <li>{{ $t("product.section2.card.content1-13") }}</li>
+                    <li>{{ $t("product.section2.card.content1-14") }}</li>
+                    <li>{{ $t("product.section2.card.content1-15") }}</li>
+                    <li>{{ $t("product.section2.card.content1-16") }}</li>
+                    <li>{{ $t("product.section2.card.content1-17") }}</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>{{ $t("product.section2.card.content1-2") }}</li>
-                  <li>{{ $t("product.section2.card.content1-3") }}</li>
-                  <li>{{ $t("product.section2.card.content1-4") }}</li>
-                  <li>{{ $t("product.section2.card.content1-5") }}</li>
-                  <li>{{ $t("product.section2.card.content1-6") }}</li>
-                  <li>{{ $t("product.section2.card.content1-7") }}</li>
-                  <li>{{ $t("product.section2.card.content1-8") }}</li>
-                  <li>{{ $t("product.section2.card.content1-9") }}</li>
-                  <li>{{ $t("product.section2.card.content1-10") }}</li>
-                  <li>{{ $t("product.section2.card.content1-11") }}</li>
-                </ul>
-                <div class="section2-card-subtitle">
-                  {{ $t("product.section2.card.content1-12") }}
-                </div>
-                <ul>
-                  <li>{{ $t("product.section2.card.content1-13") }}</li>
-                  <li>{{ $t("product.section2.card.content1-14") }}</li>
-                  <li>{{ $t("product.section2.card.content1-15") }}</li>
-                  <li>{{ $t("product.section2.card.content1-16") }}</li>
-                  <li>{{ $t("product.section2.card.content1-17") }}</li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Card 2 -->
-        <div v-show="count === 1" class="section2-card-container">
-          <div class="section2-carousel">
-            <img src="./assets/product-carousell2.png" alt="carousel2-1" />
-            <img src="./assets/product-carousell1.png" alt="carousel2-2" />
-            <img src="./assets/product-carousell2.png" alt="carousel2-3" />
-          </div>
-          <div class="section2-card">
-            <img class="section2-card-img" src="./assets/product-indicator2.png" alt="product-indicator2" />
-            <div class="section2-card-content-container">
-              <div class="section2-card-content">
-                <div class="section2-card-title">{{ $t("product.section2.card.title2") }}</div>
-                <div class="section2-card-subtitle">
-                  {{ $t("product.section2.card.content2-1") }}
+          <!-- Card 2 -->
+          <div v-show="count === 1" class="section2-card-container">
+            <div class="section2-carousel">
+              <img src="./assets/product-carousell2.png" alt="carousel2-1" />
+              <img src="./assets/product-carousell1.png" alt="carousel2-2" />
+              <img src="./assets/product-carousell2.png" alt="carousel2-3" />
+            </div>
+            <div class="section2-card">
+              <img class="section2-card-img" src="./assets/product-indicator2.png" alt="product-indicator2" />
+              <div class="section2-card-content-container">
+                <div class="section2-card-content">
+                  <div class="section2-card-title">{{ $t("product.section2.card.title2") }}</div>
+                  <div class="section2-card-subtitle">
+                    {{ $t("product.section2.card.content2-1") }}
+                  </div>
+                  <ul>
+                    <li>{{ $t("product.section2.card.content2-2") }}</li>
+                    <li>{{ $t("product.section2.card.content2-3") }}</li>
+                    <li>{{ $t("product.section2.card.content2-4") }}</li>
+                    <li>{{ $t("product.section2.card.content2-5") }}</li>
+                    <li>{{ $t("product.section2.card.content2-6") }}</li>
+                    <li>{{ $t("product.section2.card.content2-7") }}</li>
+                    <li>{{ $t("product.section2.card.content2-8") }}</li>
+                    <li>{{ $t("product.section2.card.content2-9") }}</li>
+                    <li>{{ $t("product.section2.card.content2-10") }}</li>
+                    <li>{{ $t("product.section2.card.content2-11") }}</li>
+                  </ul>
+                  <div class="section2-card-subtitle">
+                    {{ $t("product.section2.card.content2-12") }}
+                  </div>
+                  <ul>
+                    <li>{{ $t("product.section2.card.content2-13") }}</li>
+                    <li>{{ $t("product.section2.card.content2-14") }}</li>
+                    <li>{{ $t("product.section2.card.content2-15") }}</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>{{ $t("product.section2.card.content2-2") }}</li>
-                  <li>{{ $t("product.section2.card.content2-3") }}</li>
-                  <li>{{ $t("product.section2.card.content2-4") }}</li>
-                  <li>{{ $t("product.section2.card.content2-5") }}</li>
-                  <li>{{ $t("product.section2.card.content2-6") }}</li>
-                  <li>{{ $t("product.section2.card.content2-7") }}</li>
-                  <li>{{ $t("product.section2.card.content2-8") }}</li>
-                  <li>{{ $t("product.section2.card.content2-9") }}</li>
-                  <li>{{ $t("product.section2.card.content2-10") }}</li>
-                  <li>{{ $t("product.section2.card.content2-11") }}</li>
-                </ul>
-                <div class="section2-card-subtitle">
-                  {{ $t("product.section2.card.content2-12") }}
-                </div>
-                <ul>
-                  <li>{{ $t("product.section2.card.content2-13") }}</li>
-                  <li>{{ $t("product.section2.card.content2-14") }}</li>
-                  <li>{{ $t("product.section2.card.content2-15") }}</li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Card 3 -->
-        <div v-show="count === 2" class="section2-card-container">
-          <div class="section2-carousel">
-            <img src="./assets/product-carousell2.png" alt="carousel3-1" />
-            <img src="./assets/product-carousell2.png" alt="carousel3-2" />
-            <img src="./assets/product-carousell1.png" alt="carousel3-3" />
-          </div>
-          <div class="section2-card">
-            <img class="section2-card-img" src="./assets/product-indicator3.png" alt="product-indicator3" />
-            <div class="section2-card-content-container">
-              <div class="section2-card-content">
-                <div class="section2-card-title">{{ $t("product.section2.card.title3") }}</div>
-                <div class="section2-card-subtitle">
-                  {{ $t("product.section2.card.content3-1") }}
+          <!-- Card 3 -->
+          <div v-show="count === 2" class="section2-card-container">
+            <div class="section2-carousel">
+              <img src="./assets/product-carousell2.png" alt="carousel3-1" />
+              <img src="./assets/product-carousell2.png" alt="carousel3-2" />
+              <img src="./assets/product-carousell1.png" alt="carousel3-3" />
+            </div>
+            <div class="section2-card">
+              <img class="section2-card-img" src="./assets/product-indicator3.png" alt="product-indicator3" />
+              <div class="section2-card-content-container">
+                <div class="section2-card-content">
+                  <div class="section2-card-title">{{ $t("product.section2.card.title3") }}</div>
+                  <div class="section2-card-subtitle">
+                    {{ $t("product.section2.card.content3-1") }}
+                  </div>
+                  <ul>
+                    <li>{{ $t("product.section2.card.content3-2") }}</li>
+                    <li>{{ $t("product.section2.card.content3-3") }}</li>
+                    <li>{{ $t("product.section2.card.content3-4") }}</li>
+                    <li>{{ $t("product.section2.card.content3-5") }}</li>
+                    <li>{{ $t("product.section2.card.content3-6") }}</li>
+                    <li>{{ $t("product.section2.card.content3-7") }}</li>
+                    <li>{{ $t("product.section2.card.content3-8") }}</li>
+                    <li>{{ $t("product.section2.card.content3-9") }}</li>
+                    <li>{{ $t("product.section2.card.content3-10") }}</li>
+                  </ul>
                 </div>
-                <ul>
-                  <li>{{ $t("product.section2.card.content3-2") }}</li>
-                  <li>{{ $t("product.section2.card.content3-3") }}</li>
-                  <li>{{ $t("product.section2.card.content3-4") }}</li>
-                  <li>{{ $t("product.section2.card.content3-5") }}</li>
-                  <li>{{ $t("product.section2.card.content3-6") }}</li>
-                  <li>{{ $t("product.section2.card.content3-7") }}</li>
-                  <li>{{ $t("product.section2.card.content3-8") }}</li>
-                  <li>{{ $t("product.section2.card.content3-9") }}</li>
-                  <li>{{ $t("product.section2.card.content3-10") }}</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -168,31 +182,31 @@
         <div class="section3-card-container">
           <div class="section3-card">
             <img src="./assets/product-icon1.png" alt="signal1" />
-            <div>{{ $t("product.section3.card.title1") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title1") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon2.png" alt="signal2" />
-            <div>{{ $t("product.section3.card.title2") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title2") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon3.png" alt="signal3" />
-            <div>{{ $t("product.section3.card.title3") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title3") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon4.png" alt="signal4" />
-            <div>{{ $t("product.section3.card.title4") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title4") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon5.png" alt="signal5" />
-            <div>{{ $t("product.section3.card.title5") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title5") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon6.png" alt="signal6" />
-            <div>{{ $t("product.section3.card.title6") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title6") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon7.png" alt="signal7" />
-            <div>{{ $t("product.section3.card.title7") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title7") }}</div>
           </div>
         </div>
       </div>
@@ -287,7 +301,7 @@ export default {
           }
           .section1-card-content {
             opacity: 0;
-            margin: 0px 27px;
+            margin: 30px 27px 0 27px;
             font-family: DIN Alternate;
             font-size: 17px;
             font-weight: 700;
@@ -315,7 +329,7 @@ export default {
         }
         .section1-card:hover {
           .section1-card-title {
-            color: var(--gomore-red3);
+            color: #cf000e;
           }
           .section1-card-content {
             opacity: 100;
@@ -328,99 +342,101 @@ export default {
         margin: 130px 0px 116px 0px;
         background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator2.png");
       }
-      .section2-container {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        .left {
-          z-index: 11;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          cursor: pointer;
-          position: absolute;
-          margin: auto;
-        }
-        .right {
-          z-index: 10;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          cursor: pointer;
-          position: absolute;
-          margin: auto 5px auto auto;
-        }
-        .section2-card-container {
-          position: relative;
-          max-width: 1100px;
-          width: 95%;
-          height: 650px;
+      .section2-container-wrapper {
+        .section2-container {
+          max-width: 1200px;
+          width: 100%;
           margin: 0 auto;
-          background: #f4f4f4;
-          box-shadow: 2px 5px 8px rgba(64, 64, 64, 0.25);
-          border-radius: 25px;
-          .section2-carousel {
+          position: relative;
+          .left {
+            z-index: 11;
+            top: 0;
             bottom: 0;
             left: 0;
-            right: 0;
-            width: 40%;
-            height: 5%;
-            margin: 0 auto;
-            z-index: 10;
+            cursor: pointer;
             position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-              margin: 2px;
-            }
+            margin: auto;
           }
-          .section2-card {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            // .section2-card-img {
-            // }
-            .section2-card-content-container {
-              width: 100%;
+          .right {
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+            position: absolute;
+            margin: auto 5px auto auto;
+          }
+          .section2-card-container {
+            position: relative;
+            max-width: 1100px;
+            width: 100%;
+            height: 650px;
+            margin: 0 auto;
+            background: #f4f4f4;
+            box-shadow: 2px 5px 8px rgba(64, 64, 64, 0.25);
+            border-radius: 25px;
+            .section2-carousel {
+              bottom: 0;
+              left: 0;
+              right: 0;
+              width: 40%;
+              height: 5%;
+              margin: 0 auto;
+              z-index: 10;
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                margin: 2px;
+              }
+            }
+            .section2-card {
+              display: flex;
+              align-items: center;
               height: 100%;
-              .section2-card-content {
-                margin: 83px auto 81px 71px;
-                display: flex;
-                flex-direction: column;
-                .section2-card-title {
-                  margin-bottom: 25px;
-                  font-family: Arial Black;
-                  font-size: 32px;
-                  font-weight: 900;
-                  line-height: 45px;
-                  letter-spacing: 0em;
-                  text-align: left;
-                  color: #cf000e;
-                }
-                .section2-card-subtitle {
-                  margin-bottom: 18px;
-                  font-family: Arial Black;
-                  font-size: 20px;
-                  font-weight: 900;
-                  line-height: 34px;
-                  letter-spacing: 0em;
-                  text-align: left;
-                }
-                ul {
-                  list-style-type: disc;
-                  display: grid;
-                  grid-template-columns: 50% 50%;
-                  margin-bottom: 32px;
-                  li {
-                    margin-right: 10px;
-                    font-family: DIN Alternate;
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 30px;
+              // .section2-card-img {
+              // }
+              .section2-card-content-container {
+                width: 100%;
+                height: 100%;
+                .section2-card-content {
+                  margin: 83px auto 81px 71px;
+                  display: flex;
+                  flex-direction: column;
+                  .section2-card-title {
+                    margin-bottom: 25px;
+                    font-family: Arial Black;
+                    font-size: 32px;
+                    font-weight: 900;
+                    line-height: 45px;
                     letter-spacing: 0em;
                     text-align: left;
+                    color: #cf000e;
+                  }
+                  .section2-card-subtitle {
+                    margin-bottom: 18px;
+                    font-family: Arial Black;
+                    font-size: 20px;
+                    font-weight: 900;
+                    line-height: 34px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                  }
+                  ul {
+                    list-style-type: disc;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+                    margin-bottom: 32px;
+                    li {
+                      margin-right: 10px;
+                      font-family: DIN Alternate;
+                      font-size: 16px;
+                      font-weight: 700;
+                      line-height: 30px;
+                      letter-spacing: 0em;
+                      text-align: left;
+                    }
                   }
                 }
               }
@@ -472,7 +488,8 @@ export default {
             img {
               margin: 50px 10px 30px 10px;
             }
-            div {
+            .section3-card-content {
+              max-width: 141px;
               font-family: DIN Alternate;
               font-size: 20px;
               font-weight: 700;
@@ -493,23 +510,24 @@ export default {
       align-items: center;
     }
     .section-title {
+      margin-bottom: 35px;
       font-family: Arial Black;
       font-size: 36px;
       font-weight: 900;
       line-height: 51px;
       letter-spacing: 0em;
       text-align: center;
-      margin-bottom: 35px;
       color: var(--gomore-white);
     }
     .section-content {
       max-width: 1021px;
       width: 100%;
+      margin: 0 172px;
       font-family: DIN Alternate;
       font-size: 22px;
       font-weight: 700;
       line-height: 35px;
-      letter-spacing: 0em;
+      letter-spacing: 0.02em;
       text-align: center;
       color: var(--gomore-white);
     }
