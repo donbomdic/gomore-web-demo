@@ -326,8 +326,7 @@ export default {
     margin: 0 auto;
     top: 0;
     width: 100vw;
-    // background: #ffffff;
-    background: var(--color);
+    background: #ffffff;
 
     .logo {
       display: flex;

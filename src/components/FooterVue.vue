@@ -12,7 +12,7 @@ import LocaleSwitcher from "./LocaleSwitcher.vue";
 </script>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 960px) {
   .footer {
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@ import LocaleSwitcher from "./LocaleSwitcher.vue";
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 959px) {
   .footer {
     display: flex;
     flex-direction: column;

@@ -260,6 +260,9 @@ export default {
     const isMobile = ref(0);
     const count = ref(0);
     const cardWrapper = ref(null);
+    let scrolled = computed({
+      get: () => cardWrapper.value,
+    });
 
     if (window.innerWidth >= 960) {
       isMobile.value = 0;
@@ -292,40 +295,30 @@ export default {
       }
     }
 
-    function resizeEventHandler(e) {
-      if (window.innerWidth >= 960) {
-        isMobile.value = 0;
-      }
-      if (window.innerWidth < 960) {
-        isMobile.value = 1;
-      }
-    }
-
     function scrollCard(num) {
       let scrollContent = document.querySelector(".section2-card-wrapper");
       if (num === 1) {
-        scrollContent.scrollLeft += scrollContent.scrollLeftMax / 2;
+        scrollContent.scrollLeft += scrollContent.scrollWidth / 2;
       } else {
-        scrollContent.scrollLeft -= scrollContent.scrollLeftMax / 2;
+        scrollContent.scrollLeft -= scrollContent.scrollWidth / 2;
       }
     }
 
     function handleScroll() {
-      const scrolled = computed({
-        get: () => cardWrapper.value,
-      });
-      if (0 < scrolled.value.scrollLeft < scrolled.value.scrollLeftMax) {
-        count.value = 1;
-      }
-      if (scrolled.value.scrollLeft === scrolled.value.scrollLeftMax) {
-        count.value = 2;
-      }
+      console.log(scrolled.value.scrollLeft);
+      console.log(scrolled.value.scrollWidth);
       if (scrolled.value.scrollLeft === 0) {
         count.value = 0;
       }
+      if (0 < scrolled.value.scrollLeft * 2 < scrolled.value.scrollWidth / 2) {
+        count.value = 1;
+      }
+      if (scrolled.value.scrollLeft === (scrolled.value.scrollWidth / 3) * 2) {
+        count.value = 2;
+      }
     }
 
-    return { carouselCount, isMobile, resizeEventHandler, count, scrollCard, cardWrapper, handleScroll };
+    return { isMobile, count, cardWrapper, resizeEventHandler, carouselCount, scrollCard, handleScroll };
   },
   created() {
     window.addEventListener("resize", this.resizeEventHandler);
@@ -611,7 +604,7 @@ export default {
       }
     }
     .section-banner {
-      width: 100vw;
+      width: 100%;
       height: 400px;
       display: flex;
       flex-direction: column;

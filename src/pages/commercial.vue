@@ -510,7 +510,7 @@ export default {
     #section3 {
       margin-top: 136px;
       .section3-seperator {
-        width: 100vw;
+        width: 100%;
         height: 367px;
         background: #781419;
         position: relative;
