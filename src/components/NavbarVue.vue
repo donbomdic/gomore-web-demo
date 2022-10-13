@@ -111,31 +111,47 @@
     </div>
     <!-- Mobile Navigation Bar  -->
     <div v-show="size <= 959 && navMenu === true" class="nav-item">
-      <router-link :to="'/' + $i18n.locale + '/product'"
-        >{{ $t("navbar.title1") }} <img class="small-menu-" src="./asset/Icon-2.png" alt="menu-open"
-      /></router-link>
-      <div class="nav-item-product-wrapper">
-        <div class="space-product"></div>
-        <div class="nav-item-product">
+      <div class="nav-item-wrapper">
+        <div class="nav-item-title">
+          <router-link :to="'/' + $i18n.locale + '/product'">{{ $t("navbar.title1") }} </router-link>
+          <img
+            @click="isProductSection = !isProductSection"
+            :class="{ 'section-open': isProductSection }"
+            src="./asset/Icon-2.png"
+            alt="menu-open"
+          />
+        </div>
+        <div v-show="isProductSection" class="nav-item-section-wrapper">
           <router-link :to="'/' + $i18n.locale + '/product/#section1'">{{ $t("navbar.content1-1") }} </router-link>
           <router-link :to="'/' + $i18n.locale + '/product/#section2'">{{ $t("navbar.content1-2") }}</router-link>
           <router-link :to="'/' + $i18n.locale + '/product/#section3'">{{ $t("navbar.content1-3") }}</router-link>
         </div>
       </div>
-      <router-link :to="'/' + $i18n.locale + '/commercial'"
-        >{{ $t("navbar.title2") }} <img class="menu-open" src="./asset/Icon-2.png" alt="menu-open"
-      /></router-link>
-      <div class="nav-item-solution-wrapper">
-        <div class="space-solution"></div>
-        <div class="nav-item-solution">
+      <div class="nav-item-wrapper">
+        <div class="nav-item-title">
+          <router-link :to="'/' + $i18n.locale + '/commercial'">{{ $t("navbar.title2") }} </router-link
+          ><img
+            @click="isSolutionSection = !isSolutionSection"
+            :class="{ 'section-open': isSolutionSection }"
+            src="./asset/Icon-2.png"
+            alt="menu-open"
+          />
+        </div>
+        <div v-show="isSolutionSection" class="nav-item-section-wrapper">
           <router-link :to="'/' + $i18n.locale + '/commercial/#section1'">{{ $t("navbar.content2-1") }}</router-link>
           <router-link :to="'/' + $i18n.locale + '/commercial/#section2'">{{ $t("navbar.content2-2") }}</router-link>
           <router-link :to="'/' + $i18n.locale + '/commercial/#section3'">{{ $t("navbar.content2-3") }}</router-link>
         </div>
       </div>
-      <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title3") }}</router-link>
-      <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title4") }}</router-link>
-      <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title5") }}</router-link>
+      <div class="nav-item-wrapper">
+        <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title3") }}</router-link>
+      </div>
+      <div class="nav-item-wrapper">
+        <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title4") }}</router-link>
+      </div>
+      <div class="nav-item-wrapper">
+        <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title5") }}</router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -152,12 +168,14 @@ export default {
     const hoverNav2 = ref(false);
     const navMenu = ref(false);
     const size = ref(window.innerWidth);
+    const isProductSection = ref(false);
+    const isSolutionSection = ref(false);
 
     function sizeEventHandler(e) {
       size.value = e.target.innerWidth;
     }
 
-    return { router, hoverNav, hoverNav2, navMenu, size, sizeEventHandler };
+    return { router, hoverNav, hoverNav2, navMenu, size, sizeEventHandler, isProductSection, isSolutionSection };
   },
   created() {
     window.addEventListener("resize", this.sizeEventHandler);
@@ -165,132 +183,138 @@ export default {
   destroyed() {
     window.removeEventListener("resize", this.sizeEventHandler);
   },
+  watch: {
+    $route(to, from) {
+      this.navMenu = false;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.nav-main {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1028px;
-  width: 100%;
-  .logo {
-    margin: 20px 55px 0px 0px;
-    .menu {
-      display: none;
-    }
-    .menu-open {
-      display: none;
-    }
-  }
-  .nav-item {
-    max-width: 878px;
-    width: 100%;
-    height: 66px;
-    background: var(--gomore-red);
+@media screen and (min-width: 960px) {
+  .nav-main {
     display: flex;
-    padding: 0px;
-    justify-content: space-around;
-    align-items: center;
-    a {
-      text-decoration: none;
-      font-family: var(--font-DIN);
-      font-style: normal;
-      font-weight: 700;
-      font-size: var(--font-size-large);
-      line-height: 23px;
-      margin-top: 5px;
-      color: var(--gomore-white);
+    margin: 0 auto;
+    max-width: 1028px;
+    width: 100%;
+    .logo {
+      margin: 20px 55px 0px 0px;
+      .menu {
+        display: none;
+      }
+      .menu-open {
+        display: none;
+      }
     }
-    a:hover {
-      color: var(--gomore-red2);
+    .nav-item {
+      max-width: 878px;
+      width: 100%;
+      height: 66px;
+      background: var(--gomore-red);
+      display: flex;
+      padding: 0px;
+      justify-content: space-around;
+      align-items: center;
+      a {
+        text-decoration: none;
+        font-family: var(--font-DIN);
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--font-size-large);
+        line-height: 23px;
+        margin-top: 5px;
+        color: var(--gomore-white);
+      }
+      a:hover {
+        color: var(--gomore-red2);
+      }
     }
   }
-}
-.nav-item-product-wrapper {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 66px;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  display: flex;
-  max-width: 1028px;
-  width: 100%;
-  .space-product {
-    max-width: 205px;
-    width: 100%;
-  }
-  .nav-item-product {
-    max-width: 878px;
-    width: 100%;
-    height: 66px;
-    background: var(--gomore-red2);
+  .nav-item-product-wrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
     display: flex;
-    padding: 0px;
-    justify-content: flex-start;
-    align-items: center;
-    a {
-      text-decoration: none;
-      font-family: var(--font-DIN);
-      font-style: normal;
-      font-weight: 700;
-      font-size: var(--font-size-large);
-      line-height: 23px;
-      margin-top: 5px;
-      margin-left: 20px;
-      color: var(--gomore-white);
+    max-width: 1028px;
+    width: 100%;
+    .space-product {
+      max-width: 205px;
+      width: 100%;
     }
-    a:hover {
-      color: var(--gomore-red);
+    .nav-item-product {
+      max-width: 878px;
+      width: 100%;
+      height: 66px;
+      background: var(--gomore-red2);
+      display: flex;
+      padding: 0px;
+      justify-content: flex-start;
+      align-items: center;
+      a {
+        text-decoration: none;
+        font-family: var(--font-DIN);
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--font-size-large);
+        line-height: 23px;
+        margin-top: 5px;
+        margin-left: 20px;
+        color: var(--gomore-white);
+      }
+      a:hover {
+        color: var(--gomore-red);
+      }
     }
   }
-}
 
-.nav-item-solution-wrapper {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 66px;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  display: flex;
-  max-width: 1028px;
-  width: 100%;
-  .space-solution {
-    max-width: 417px;
-    width: 100%;
-  }
-  .nav-item-solution {
-    max-width: 666px;
-    width: 100%;
-    height: 66px;
-    background: var(--gomore-red2);
+  .nav-item-solution-wrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 66px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
     display: flex;
-    padding: 0px;
-    justify-content: flex-start;
-    align-items: center;
-    a {
-      text-decoration: none;
-      font-family: var(--font-DIN);
-      font-style: normal;
-      font-weight: 700;
-      font-size: var(--font-size-large);
-      line-height: 23px;
-      margin-top: 5px;
-      margin-left: 20px;
-      color: var(--gomore-white);
+    max-width: 1028px;
+    width: 100%;
+    .space-solution {
+      max-width: 417px;
+      width: 100%;
     }
-    a:hover {
-      color: var(--gomore-red);
+    .nav-item-solution {
+      max-width: 666px;
+      width: 100%;
+      height: 66px;
+      background: var(--gomore-red2);
+      display: flex;
+      padding: 0px;
+      justify-content: flex-start;
+      align-items: center;
+      a {
+        text-decoration: none;
+        font-family: var(--font-DIN);
+        font-style: normal;
+        font-weight: 700;
+        font-size: var(--font-size-large);
+        line-height: 23px;
+        margin-top: 5px;
+        margin-left: 20px;
+        color: var(--gomore-white);
+      }
+      a:hover {
+        color: var(--gomore-red);
+      }
     }
   }
 }
-
 // @media screen and (min-width: 1025px) and (max-width: 1200px) {
 //   .nav-main {
 //     z-index: 20;
@@ -324,7 +348,7 @@ export default {
 
 @media screen and (max-width: 959px) {
   .nav-main {
-    z-index: 20;
+    z-index: 50;
     position: fixed;
     display: block;
     margin: 0 auto;
@@ -356,60 +380,56 @@ export default {
       background: var(--gomore-red);
       display: flex;
       flex-direction: column;
-      padding: 0px;
       align-items: flex-start;
-      a {
-        text-decoration: none;
-        font-family: var(--font-DIN);
-        font-style: normal;
-        font-weight: 700;
-        font-size: var(--font-size-large);
-        line-height: 23px;
-        margin-top: 5px;
-        color: var(--gomore-white);
-      }
-      a:hover {
-        color: var(--gomore-red2);
+      .nav-item-wrapper {
+        width: 90%;
+        margin: 45px 16px 0 16px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid var(--gomore-white);
+        a {
+          text-decoration: none;
+          font-family: Arial Black;
+          font-size: 15px;
+          font-weight: 900;
+          line-height: 21px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: var(--gomore-white);
+        }
+        .nav-item-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          img {
+            height: 14px;
+            width: 14px;
+          }
+          .section-open {
+            height: 14px;
+            width: 14px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+        .nav-item-section-wrapper {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          margin-left: 39px;
+          a {
+            margin-bottom: 20px;
+            font-family: DIN Alternate;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0em;
+          }
+        }
       }
     }
-  }
-  .nav-item-product-wrapper {
-    position: static;
-    display: block;
-    max-width: 1024px;
-    width: 100%;
-    margin: 0;
-    .space-product {
-      display: none;
-    }
-    .nav-item-product {
-      max-width: 878px;
-      width: 100%;
-      height: 66px;
-      background: var(--gomore-red);
-      display: flex;
-      flex-direction: column;
-      padding: 0px;
-      justify-content: center;
-      align-items: flex-start;
-      a {
-        text-decoration: none;
-        font-family: var(--font-DIN);
-        font-style: normal;
-        font-weight: 700;
-        font-size: var(--font-size-large);
-        line-height: 23px;
-        margin-top: 5px;
-        margin-left: 20px;
-        color: var(--gomore-white);
-      }
-      a:hover {
-        color: var(--gomore-red2);
-      }
-    }
-  }
-  .nav-item-solution-wrapper {
-    display: none;
   }
 }
 </style>

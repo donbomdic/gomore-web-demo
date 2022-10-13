@@ -755,6 +755,7 @@ export default {
       align-items: center;
     }
     .section-title {
+      margin: 0 21px;
       font-family: Arial Black;
       font-size: 22px;
       font-weight: 900;
@@ -765,6 +766,7 @@ export default {
       color: var(--gomore-white);
     }
     .section-content {
+      margin: 5px 21px;
       font-family: DIN Alternate;
       font-size: 16px;
       font-weight: 700;

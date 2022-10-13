@@ -2,9 +2,9 @@
   "navbar": {
     "title1": "Gomore Products",
     "content1-1": "A.I. Coach Program",
-    "content1-2": "Exercise and Health Indicators",
+    "content1-2": "Fitness and Health Indicators",
     "content1-3": "Signal Conversion",
-    "title2": "Gomore Commercial Applications",
+    "title2": "Applications",
     "content2-1": "Smart Wearables",
     "content2-2": "Fitness Equipments",
     "content2-3": "Compound Solutions",
@@ -77,7 +77,7 @@
       }
     },
     "section2": {
-      "title": "Exercise and Health Indicators",
+      "title": "Fitness and Health Indicators",
       "content1": "GoMore's algorithms produce a full range of scientifically validated wellness, fitness and sport performance indicators.",
       "content2": "These indicators are used to produce visual reports that help you track your health and fitness to ensure you are achieving your long-term training goals.",
       "card": {
