@@ -45,8 +45,8 @@ ul {
     font-size: 16px;
     font-weight: 500;
     line-height: 16px;
-    font-family: var(--font-DIN);
-    color: var(--gomore-white);
+    font-family: var(--font2);
+    color: #ffffff;
   }
   li {
     cursor: pointer;
@@ -54,8 +54,8 @@ ul {
     font-size: 16px;
     font-weight: 500;
     line-height: 16px;
-    font-family: var(--font-DIN);
-    color: var(--gomore-white);
+    font-family: var(--font2);
+    color: #ffffff;
   }
 }
 

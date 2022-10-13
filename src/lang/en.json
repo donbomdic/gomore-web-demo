@@ -77,7 +77,8 @@
         "content5-1": "The Integrated-Fitness Coach program evaluates user upper body, lower body and core exercise ability with a quick and easy assessment.",
         "content5-2": "The program then safely guides users through training sessions that improve cardiovascular fitness and strength, all without leaving their home.",
         "title6": "Youth Coach",
-        "content6": "The Youth Coach is a training program aimed at improving sport and physical performance based assessments common among middle schools and high schools. This program guides teenagers through exercise sessions designed to improve their physical performance testing scores."
+        "content6-1": "The Youth Coach is a training program aimed at improving sport and physical performance based assessments common among middle schools and high schools.",
+        "content6-2": "This program guides teenagers through exercise sessions designed to improve their physical performance testing scores."
       }
     },
     "section2": {
@@ -134,7 +135,8 @@
     },
     "section3": {
       "title1": "Physiological Signal Processing",
-      "content": "Using the power of GoMore fitness and wellness algorithms, our scientists and engineers convert physiological signals into meaningful and digestible indicators. Some of these physiological signals include Photoplethysmography (PPG), Accelerometer (ACC), Gyroscope (Gyro), and Electrocardiogram (ECG).",
+      "content1": "Using the power of GoMore fitness and wellness algorithms, our scientists and engineers convert physiological signals into meaningful and digestible indicators.",
+      "content2": "Some of these physiological signals include Photoplethysmography (PPG), Accelerometer (ACC), Gyroscope (Gyro), and Electrocardiogram (ECG).",
       "title2": "Signal Indicators",
       "card": {
         "title1": "Heart rate",

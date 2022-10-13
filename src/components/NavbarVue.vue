@@ -214,23 +214,23 @@ export default {
       max-width: 878px;
       width: 100%;
       height: 66px;
-      background: var(--gomore-red);
+      background: #9b000a;
       display: flex;
       padding: 0px;
       align-items: center;
       a {
         margin: auto 10px auto 55px;
         text-decoration: none;
-        font-family: DIN Alternate;
+        font-family: var(--font2);
         font-size: 20px;
         font-weight: 700;
         line-height: 23px;
         letter-spacing: 0em;
         text-align: center;
-        color: var(--gomore-white);
+        color: #ffffff;
       }
       a:hover {
-        color: var(--gomore-red2);
+        color: #860009;
       }
     }
   }
@@ -254,21 +254,23 @@ export default {
       max-width: 878px;
       width: 100%;
       height: 66px;
-      background: var(--gomore-red2);
+      background: #860009;
       display: flex;
       align-items: center;
       a {
         margin: auto 10px auto 55px;
         text-decoration: none;
-        font-family: var(--font-DIN);
+        font-family: var(--font2);
         font-style: normal;
+        font-size: 20px;
         font-weight: 700;
-        font-size: var(--font-size-large);
+        letter-spacing: 0em;
+        text-align: left;
         line-height: 23px;
-        color: var(--gomore-white);
+        color: #ffffff;
       }
       a:hover {
-        color: var(--gomore-red);
+        color: #9b000a;
       }
     }
   }
@@ -293,56 +295,28 @@ export default {
       max-width: 717px;
       width: 100%;
       height: 66px;
-      background: var(--gomore-red2);
+      background: #860009;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       a {
         margin: auto -5px auto 34px;
         text-decoration: none;
-        font-family: var(--font-DIN);
+        font-family: var(--font2);
         font-style: normal;
         font-weight: 700;
-        font-size: var(--font-size-large);
+        font-size: 20px;
         line-height: 23px;
-        color: var(--gomore-white);
+        letter-spacing: 0em;
+        text-align: left;
+        color: #ffffff;
       }
       a:hover {
-        color: var(--gomore-red);
+        color: #9b000a;
       }
     }
   }
 }
-// @media screen and (min-width: 1025px) and (max-width: 1200px) {
-//   .nav-main {
-//     z-index: 20;
-//     .nav-item {
-//       a {
-//         font-size: var(--font-size-medium);
-//       }
-//     }
-//   }
-//   .nav-item-product-wrapper {
-//     .nav-item-product {
-//       ul {
-//         li {
-//           font-size: var(--font-size-medium);
-//           margin-left: 25px;
-//         }
-//       }
-//     }
-//   }
-//   .nav-item-solution-wrapper {
-//     .nav-item-solution {
-//       ul {
-//         li {
-//           font-size: var(--font-size-medium);
-//           margin-left: 25px;
-//         }
-//       }
-//     }
-//   }
-// }
 
 @media screen and (max-width: 959px) {
   .nav-main {
@@ -352,7 +326,8 @@ export default {
     margin: 0 auto;
     top: 0;
     width: 100vw;
-    background: var(--gomore-white);
+    // background: #ffffff;
+    background: var(--color);
 
     .logo {
       display: flex;
@@ -383,7 +358,7 @@ export default {
       max-width: 100vw;
       width: 100%;
       height: 100vh;
-      background: var(--gomore-red);
+      background: #9b000a;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -391,17 +366,17 @@ export default {
         width: 90%;
         margin: 45px 16px 0 16px;
         padding-bottom: 15px;
-        border-bottom: 2px solid var(--gomore-white);
+        border-bottom: 2px solid #ffffff;
         a {
           text-decoration: none;
-          font-family: Arial Black;
+          font-family: var(--font1);
           font-size: 15px;
           font-weight: 900;
           line-height: 21px;
           letter-spacing: 0em;
           text-align: left;
 
-          color: var(--gomore-white);
+          color: #ffffff;
         }
         .nav-item-title {
           display: flex;
@@ -428,7 +403,7 @@ export default {
           margin-left: 39px;
           a {
             margin-bottom: 20px;
-            font-family: DIN Alternate;
+            font-family: var(--font2);
             font-size: 14px;
             font-weight: 700;
             line-height: 16px;

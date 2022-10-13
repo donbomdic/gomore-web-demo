@@ -33,7 +33,8 @@
         </div>
         <div class="section1-card card6">
           <div class="section1-card-title">{{ $t("product.section1.card.title6") }}</div>
-          <div class="section1-card-content">{{ $t("product.section1.card.content6") }}</div>
+          <div class="section1-card-content">{{ $t("product.section1.card.content6-1") }}</div>
+          <div class="section1-card-content">{{ $t("product.section1.card.content6-2") }}</div>
         </div>
       </div>
     </div>
@@ -43,31 +44,43 @@
         <div class="section-content">{{ $t("product.section2.content1") }}</div>
         <div class="section-content">{{ $t("product.section2.content2") }}</div>
       </div>
-      <div class="section2-container-wrapper">
-        <div class="section2-container">
-          <img
-            v-show="count === 1 || count === 2"
-            class="left"
-            src="./assets/product-left.png"
-            alt="product-left"
-            @click="carouselCount(-1)"
-          />
-          <img
-            v-show="count === 0 || count === 1"
-            class="right"
-            src="./assets/product-right.png"
-            alt="product-right"
-            @click="carouselCount(1)"
-          />
+      <div class="section2-container">
+        <img
+          v-show="count === 1 || count === 2"
+          class="left"
+          src="./assets/product-left.png"
+          alt="product-left"
+          @click="carouselCount(-1), scrollCard(-1)"
+        />
+        <img
+          v-show="count === 0 || count === 1"
+          class="right"
+          src="./assets/product-right.png"
+          alt="product-right"
+          @click="carouselCount(1), scrollCard(1)"
+        />
+        <div ref="cardWrapper" class="section2-card-wrapper" @scroll="handleScroll()">
           <!-- Card 1-->
-          <div v-show="count === 0" class="section2-card-container">
+          <div class="section2-card-container">
             <div class="section2-carousel">
-              <img src="./assets/product-carousell1.png" alt="carousel1-1" />
+              <img v-show="isMobile === 1" src="./assets/product-carousell1-mobile.png" alt="carousel1-1-mobile" />
+              <img v-show="isMobile === 0" src="./assets/product-carousell1.png" alt="carousel1-1" />
               <img src="./assets/product-carousell2.png" alt="carousel1-2" />
               <img src="./assets/product-carousell2.png" alt="carousel1-3" />
             </div>
             <div class="section2-card">
-              <img class="section2-card-img" src="./assets/product-indicator1.png" alt="product-indicator1" />
+              <img
+                v-show="isMobile === 1"
+                class="section2-card-img"
+                src="./assets/product-indicator1-mobile.png"
+                alt="product-indicator1-mobile"
+              />
+              <img
+                v-show="isMobile === 0"
+                class="section2-card-img"
+                src="./assets/product-indicator1.png"
+                alt="product-indicator1"
+              />
               <div class="section2-card-content-container">
                 <div class="section2-card-content">
                   <div class="section2-card-title">{{ $t("product.section2.card.title1") }}</div>
@@ -101,14 +114,26 @@
             </div>
           </div>
           <!-- Card 2 -->
-          <div v-show="count === 1" class="section2-card-container">
+          <div class="section2-card-container">
             <div class="section2-carousel">
               <img src="./assets/product-carousell2.png" alt="carousel2-1" />
-              <img src="./assets/product-carousell1.png" alt="carousel2-2" />
+              <img v-show="isMobile === 1" src="./assets/product-carousell1-mobile.png" alt="carousel2-2-mobile" />
+              <img v-show="isMobile === 0" src="./assets/product-carousell1.png" alt="carousel2-2" />
               <img src="./assets/product-carousell2.png" alt="carousel2-3" />
             </div>
             <div class="section2-card">
-              <img class="section2-card-img" src="./assets/product-indicator2.png" alt="product-indicator2" />
+              <img
+                v-show="isMobile === 1"
+                class="section2-card-img"
+                src="./assets/product-indicator2-mobile.png"
+                alt="product-indicator2-mobile"
+              />
+              <img
+                v-show="isMobile === 0"
+                class="section2-card-img"
+                src="./assets/product-indicator2.png"
+                alt="product-indicator2"
+              />
               <div class="section2-card-content-container">
                 <div class="section2-card-content">
                   <div class="section2-card-title">{{ $t("product.section2.card.title2") }}</div>
@@ -140,14 +165,26 @@
             </div>
           </div>
           <!-- Card 3 -->
-          <div v-show="count === 2" class="section2-card-container">
+          <div class="section2-card-container">
             <div class="section2-carousel">
               <img src="./assets/product-carousell2.png" alt="carousel3-1" />
               <img src="./assets/product-carousell2.png" alt="carousel3-2" />
-              <img src="./assets/product-carousell1.png" alt="carousel3-3" />
+              <img v-show="isMobile === 1" src="./assets/product-carousell1-mobile.png" alt="carousel3-3-mobile" />
+              <img v-show="isMobile === 0" src="./assets/product-carousell1.png" alt="carousel3-3" />
             </div>
             <div class="section2-card">
-              <img class="section2-card-img" src="./assets/product-indicator3.png" alt="product-indicator3" />
+              <img
+                v-show="isMobile === 1"
+                class="section2-card-img"
+                src="./assets/product-indicator3-mobile.png"
+                alt="product-indicator3-mobile"
+              />
+              <img
+                v-show="isMobile === 0"
+                class="section2-card-img"
+                src="./assets/product-indicator3.png"
+                alt="product-indicator3"
+              />
               <div class="section2-card-content-container">
                 <div class="section2-card-content">
                   <div class="section2-card-title">{{ $t("product.section2.card.title3") }}</div>
@@ -175,7 +212,8 @@
     <div id="section3">
       <div class="section-banner">
         <div class="section-title">{{ $t("product.section3.title1") }}</div>
-        <div class="section-content">{{ $t("product.section3.content") }}</div>
+        <div class="section-content">{{ $t("product.section3.content1") }}</div>
+        <div class="section-content">{{ $t("product.section3.content2") }}</div>
       </div>
       <div class="section3-container">
         <div class="section3-card-title">{{ $t("product.section3.title2") }}</div>
@@ -215,11 +253,28 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 export default {
   setup() {
+    const isMobile = ref(0);
     const count = ref(0);
+    const cardWrapper = ref(null);
+
+    if (window.innerWidth >= 960) {
+      isMobile.value = 0;
+    } else {
+      isMobile.value = 1;
+    }
+
+    function resizeEventHandler(e) {
+      if (window.innerWidth >= 960) {
+        isMobile.value = 0;
+      }
+      if (window.innerWidth < 960) {
+        isMobile.value = 1;
+      }
+    }
 
     function carouselCount(num) {
       if (num === 1) {
@@ -237,7 +292,46 @@ export default {
       }
     }
 
-    return { carouselCount, count };
+    function resizeEventHandler(e) {
+      if (window.innerWidth >= 960) {
+        isMobile.value = 0;
+      }
+      if (window.innerWidth < 960) {
+        isMobile.value = 1;
+      }
+    }
+
+    function scrollCard(num) {
+      let scrollContent = document.querySelector(".section2-card-wrapper");
+      if (num === 1) {
+        scrollContent.scrollLeft += scrollContent.scrollLeftMax / 2;
+      } else {
+        scrollContent.scrollLeft -= scrollContent.scrollLeftMax / 2;
+      }
+    }
+
+    function handleScroll() {
+      const scrolled = computed({
+        get: () => cardWrapper.value,
+      });
+      if (0 < scrolled.value.scrollLeft < scrolled.value.scrollLeftMax) {
+        count.value = 1;
+      }
+      if (scrolled.value.scrollLeft === scrolled.value.scrollLeftMax) {
+        count.value = 2;
+      }
+      if (scrolled.value.scrollLeft === 0) {
+        count.value = 0;
+      }
+    }
+
+    return { carouselCount, isMobile, resizeEventHandler, count, scrollCard, cardWrapper, handleScroll };
+  },
+  created() {
+    window.addEventListener("resize", this.resizeEventHandler);
+  },
+  destroyed() {
+    window.addEventListener("resize", this.resizeEventHandler);
   },
 };
 </script>
@@ -292,8 +386,8 @@ export default {
           .section1-card-title {
             margin-top: 175px;
             margin-bottom: 30px;
-            font-family: Arial Black;
-            color: var(--gomore-white);
+            font-family: var(--font1);
+            color: #ffffff;
             font-size: 22px;
             font-weight: 900;
             line-height: 31px;
@@ -302,7 +396,7 @@ export default {
           .section1-card-content {
             opacity: 0;
             margin: 30px 27px 0 27px;
-            font-family: DIN Alternate;
+            font-family: var(--font2);
             font-size: 17px;
             font-weight: 700;
             line-height: 24px;
@@ -342,31 +436,46 @@ export default {
         margin: 130px 0px 116px 0px;
         background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator2.png");
       }
-      .section2-container-wrapper {
-        .section2-container {
-          max-width: 1200px;
-          width: 100%;
-          margin: 0 auto;
-          position: relative;
-          .left {
-            z-index: 11;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            cursor: pointer;
-            position: absolute;
-            margin: auto;
-          }
-          .right {
-            z-index: 10;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            cursor: pointer;
-            position: absolute;
-            margin: auto 5px auto auto;
-          }
+
+      .section2-container {
+        max-width: 1366px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        .left {
+          z-index: 11;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          cursor: pointer;
+          position: absolute;
+          margin: auto auto auto 90px;
+        }
+        .right {
+          z-index: 10;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          cursor: pointer;
+          position: absolute;
+          margin: auto 90px auto auto;
+        }
+        .section2-card-wrapper::-webkit-scrollbar {
+          display: none;
+        }
+        .section2-card-wrapper {
+          height: 680px;
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: 100%;
+          overflow-x: auto;
+          // overscroll-behavior-inline: contain;
+          scroll-snap-type: x mandatory;
           .section2-card-container {
+            scroll-snap-align: center;
             position: relative;
             max-width: 1100px;
             width: 100%;
@@ -401,12 +510,12 @@ export default {
                 width: 100%;
                 height: 100%;
                 .section2-card-content {
-                  margin: 83px auto 81px 71px;
+                  margin: 83px auto auto 71px;
                   display: flex;
                   flex-direction: column;
                   .section2-card-title {
                     margin-bottom: 25px;
-                    font-family: Arial Black;
+                    font-family: var(--font1);
                     font-size: 32px;
                     font-weight: 900;
                     line-height: 45px;
@@ -416,7 +525,7 @@ export default {
                   }
                   .section2-card-subtitle {
                     margin-bottom: 18px;
-                    font-family: Arial Black;
+                    font-family: var(--font1);
                     font-size: 20px;
                     font-weight: 900;
                     line-height: 34px;
@@ -430,7 +539,7 @@ export default {
                     margin-bottom: 32px;
                     li {
                       margin-right: 10px;
-                      font-family: DIN Alternate;
+                      font-family: var(--font2);
                       font-size: 16px;
                       font-weight: 700;
                       line-height: 30px;
@@ -447,7 +556,7 @@ export default {
     }
     #section3 {
       .section-banner {
-        margin: 116px 0px 75px 0px;
+        margin: 86px 0px 75px 0px;
         background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator3.png");
       }
       .section3-container {
@@ -459,7 +568,7 @@ export default {
         justify-content: center;
         align-items: center;
         .section3-card-title {
-          font-family: Arial Black;
+          font-family: var(--font1);
           font-size: 32px;
           font-weight: 900;
           line-height: 45px;
@@ -490,7 +599,7 @@ export default {
             }
             .section3-card-content {
               max-width: 141px;
-              font-family: DIN Alternate;
+              font-family: var(--font2);
               font-size: 20px;
               font-weight: 700;
               line-height: 26px;
@@ -511,57 +620,57 @@ export default {
     }
     .section-title {
       margin-bottom: 35px;
-      font-family: Arial Black;
+      font-family: var(--font1);
       font-size: 36px;
       font-weight: 900;
       line-height: 51px;
       letter-spacing: 0em;
       text-align: center;
-      color: var(--gomore-white);
+      color: #ffffff;
     }
     .section-content {
       max-width: 1021px;
       width: 100%;
       margin: 0 172px;
-      font-family: DIN Alternate;
+      font-family: var(--font2);
       font-size: 22px;
       font-weight: 700;
       line-height: 35px;
       letter-spacing: 0.02em;
       text-align: center;
-      color: var(--gomore-white);
+      color: #ffffff;
     }
   }
 }
 
-// RESPONSIVE WITH MIN WIDTH 1024PX
+// RESPONSIVE WITH MAX WIDTH 959PX
 @media screen and (max-width: 959px) {
   .product {
     #section1 {
       .section-banner {
         margin: 80px 0px 30px 0px;
-        background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator1.png");
+        background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator1-mobile.png");
       }
       .section1-card-container {
         width: 100vw;
         margin: 0 auto;
         .card1 {
-          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai1.png");
+          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai1-mobile.png");
         }
         .card2 {
-          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai2.png");
+          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai2-mobile.png");
         }
         .card3 {
-          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai3.png");
+          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai3-mobile.png");
         }
         .card4 {
-          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai4.png");
+          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai4-mobile.png");
         }
         .card5 {
-          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai5.png");
+          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai5-mobile.png");
         }
         .card6 {
-          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai6.png");
+          background-image: linear-gradient(#241b19bf, #241b19bf), url("./assets/product-ai6-mobile.png");
         }
 
         .section1-card {
@@ -576,34 +685,35 @@ export default {
           height: 400px;
 
           .section1-card-title {
-            margin-bottom: 30px;
-            font-family: Arial Black;
-            color: var(--gomore-white);
+            margin-bottom: 20px;
+            font-family: var(--font1);
+            color: #ffffff;
             font-size: 22px;
             font-weight: 900;
             line-height: 31px;
             letter-spacing: 0em;
           }
           .section1-card-content {
-            margin: 0px 27px;
-            font-family: DIN Alternate;
+            margin: 10px 27px;
+            font-family: var(--font2);
             font-size: 17px;
             font-weight: 700;
             line-height: 24px;
             letter-spacing: 0em;
-            color: var(--gomore-white);
+            color: #ffffff;
           }
         }
       }
     }
     #section2 {
       .section-banner {
-        margin: 80px 0px 30px 0px;
-        background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator2.png");
+        margin: 35px 0px;
+        background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator2-mobile.png");
       }
       .section2-container {
         max-width: 100vw;
         width: 100%;
+        height: 930px;
         margin: 0 auto;
         position: relative;
         .left {
@@ -626,82 +736,94 @@ export default {
           position: absolute;
           margin: auto 5px auto auto;
         }
-        .section2-card-container {
-          position: relative;
-          width: 100%;
-          height: 1200px;
-          margin: 0 auto;
-          background: #f4f4f4;
-          .section2-carousel {
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 40%;
-            height: 75vh;
+        .section2-card-wrapper::-webkit-scrollbar {
+          display: none;
+        }
+        .section2-card-wrapper {
+          height: 920px;
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+          display: grid;
+          grid-auto-flow: column;
+          grid-auto-columns: 100%;
+          overflow-x: auto;
+          // overscroll-behavior-inline: contain;
+          scroll-snap-type: x proximity;
+          .section2-card-container {
+            scroll-snap-align: center;
+            position: relative;
+            width: 100%;
             margin: 0 auto;
-            z-index: 10;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-              margin: 2px;
+            background: #f4f4f4;
+            .section2-carousel {
+              top: 248px;
+              left: 0;
+              right: 0;
+              width: 40%;
+              margin: 0 auto;
+              z-index: 10;
+              position: absolute;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                margin: auto 4.5px;
+              }
             }
-          }
-          .section2-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100%;
-            .section2-card-img {
-              width: 100%;
-              height: 40vh;
-              object-fit: none;
-              object-position: 50% 30%;
-              margin-bottom: 30px;
-            }
-            .section2-card-content-container {
-              width: 100%;
-              height: 80%;
-              .section2-card-content {
-                margin: 0 auto 0 40px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                .section2-card-title {
-                  margin-bottom: 15px;
-                  font-family: Arial Black;
-                  font-size: 20px;
-                  font-weight: 900;
-                  line-height: 28px;
-                  letter-spacing: 0em;
-                  text-align: left;
-                  color: #cf000e;
-                }
-                .section2-card-subtitle {
-                  margin-bottom: 18px;
-                  font-family: Arial Black;
-                  font-size: 16px;
-                  font-weight: 900;
-                  line-height: 24px;
-                  letter-spacing: 0em;
-                  text-align: left;
-                }
-                ul {
-                  list-style-type: disc;
+            .section2-card {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              img {
+                width: 100vw;
+                height: 274px;
+                object-fit: cover;
+              }
+              .section2-card-content-container {
+                margin-top: 30px;
+                width: 100%;
+                .section2-card-content {
+                  margin-left: 56px;
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
-                  margin-bottom: 30px;
-                  li {
-                    margin-bottom: 5px;
-                    font-family: DIN Alternate;
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 30px;
+                  align-items: flex-start;
+                  .section2-card-title {
+                    margin-bottom: 15px;
+                    font-family: var(--font1);
+                    font-size: 20px;
+                    font-weight: 900;
+                    line-height: 28px;
                     letter-spacing: 0em;
                     text-align: left;
+
+                    color: #cf000e;
+                  }
+                  .section2-card-subtitle {
+                    margin-bottom: 18px;
+                    font-family: var(--font1);
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    letter-spacing: 0.06em;
+                    text-align: left;
+                  }
+                  ul {
+                    margin-top: 0px;
+                    list-style-type: disc;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-bottom: 22px;
+                    li {
+                      margin-bottom: 5px;
+                      font-family: var(--font1);
+                      font-size: 14px;
+                      font-weight: 500;
+                      line-height: 24px;
+                      letter-spacing: 0.04em;
+                      text-align: left;
+                    }
                   }
                 }
               }
@@ -713,7 +835,7 @@ export default {
     #section3 {
       .section-banner {
         margin: 80px 0px 30px 0px;
-        background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator3.png");
+        background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator3-mobile.png");
       }
       .section3-container {
         width: 100vw;
@@ -723,7 +845,7 @@ export default {
         justify-content: center;
         align-items: center;
         .section3-card-title {
-          font-family: Arial Black;
+          font-family: var(--font1);
           font-size: 22px;
           font-weight: 900;
           line-height: 45px;
@@ -731,15 +853,15 @@ export default {
           text-align: center;
         }
         .section3-card-container {
-          width: 90vw;
+          width: 100vw;
           margin: 30px auto 80px auto;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
           .section3-card {
-            margin: 10px 10px;
-            width: 105px;
+            margin: 5px 5px;
+            width: 95px;
             height: 116px;
             background: #f4f4f4;
             box-shadow: 0px 2px 5px rgba(71, 71, 71, 0.25);
@@ -753,8 +875,9 @@ export default {
               margin: 20px 10px 20px 10px;
             }
             div {
+              font-family: var(--font2);
               font-family: DIN Alternate;
-              font-size: 16px;
+              font-size: 12px;
               font-weight: 700;
               line-height: 16px;
               letter-spacing: 0em;
@@ -774,24 +897,24 @@ export default {
     }
     .section-title {
       margin: 0 21px;
-      font-family: Arial Black;
+      font-family: var(--font1);
       font-size: 22px;
       font-weight: 900;
       line-height: 31px;
       letter-spacing: 0em;
       text-align: center;
       margin-bottom: 35px;
-      color: var(--gomore-white);
+      color: #ffffff;
     }
     .section-content {
       margin: 5px 21px;
-      font-family: DIN Alternate;
+      font-family: var(--font2);
       font-size: 16px;
       font-weight: 700;
       line-height: 19px;
       letter-spacing: 0em;
       text-align: center;
-      color: var(--gomore-white);
+      color: #ffffff;
     }
   }
 }

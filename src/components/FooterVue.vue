@@ -22,13 +22,13 @@ import LocaleSwitcher from "./LocaleSwitcher.vue";
     width: 100%;
     height: 66px;
     margin: 0 auto;
-    background: var(--gomore-red);
+    background: #a51a23;
     .copyright {
       margin-left: 45px;
       font-weight: 500;
       font-size: 16px;
       line-height: 16px;
-      color: var(--gomore-white);
+      color: #ffffff;
     }
     .locale-switcher {
       margin-right: 28px;
@@ -47,13 +47,13 @@ import LocaleSwitcher from "./LocaleSwitcher.vue";
     width: 100vw;
     height: 80px;
     margin: 0 auto;
-    background: var(--gomore-red);
+    background: #a51a23;
     .copyright {
       margin: 30px auto 0 auto;
       font-weight: 500;
       font-size: 12px;
       line-height: 16px;
-      color: var(--gomore-white);
+      color: #ffffff;
     }
     .locale-switcher {
       margin: 0 50px 0 10px;

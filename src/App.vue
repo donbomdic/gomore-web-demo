@@ -1,29 +1,46 @@
-<script setup>
+<template>
+  <NavbarVue :class="{ 'zh-lang': isZH }" />
+  <router-view :class="{ 'zh-lang': isZH }"></router-view>
+  <FooterVue :class="{ 'zh-lang': isZH }" />
+</template>
+
+<script>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import NavbarVue from "./components/NavbarVue.vue";
 import FooterVue from "./components/FooterVue.vue";
+import { ref } from "vue";
+
+export default {
+  name: "App",
+  components: { NavbarVue, FooterVue },
+  setup() {
+    const isZH = ref(false);
+
+    if (window.location.pathname.slice(1, 3) === "tw") {
+      ("./assets/style.zh.css");
+      isZH.value = true;
+    }
+
+    return { isZH };
+  },
+};
 </script>
 
-<template>
-  <NavbarVue />
-  <router-view></router-view>
-  <FooterVue />
-</template>
-
 <style>
+@font-face {
+  font-family: GenYoGothic JP;
+  src: url("./assets/GenYoGothicJP-N.ttf") format("truetype");
+}
+
 :root {
-  --gomore-red: #9b000a;
-  --gomore-red2: #860009;
-  --gomore-red3: #720910;
-  --gomore-white: #ffffff;
+  --font1: Arial Black;
+  --font2: DIN Alternate;
+}
 
-  --font-DIN: "DIN Alternate", sans-serif;
-  --font-Arial: "Arial Black", sans-serif;
-
-  --font-size-large: 20px;
-  --font-size-medium: 18px;
-  --font-size-small: 16px;
+.zh-lang {
+  --font1: GenYoGothic JP;
+  --font1: GenYoGothic JP;
 }
 
 html,
