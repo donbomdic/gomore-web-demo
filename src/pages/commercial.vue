@@ -276,11 +276,11 @@ export default {
             max-width: 529px;
             width: 100%;
             height: 51px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 36px;
-            font-weight: 900;
-            line-height: 51px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section1-title);
+            line-height: var(--font-line-height-commercial-section1-title);
+            letter-spacing: var(--font-letter-spacing-commercial-section1-title);
             text-align: left;
             color: #282828;
           }
@@ -295,11 +295,11 @@ export default {
             max-width: 489px;
             width: 100%;
             height: 419px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 22px;
-            font-weight: 700;
-            line-height: 35px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section1-content);
+            line-height: var(--font-line-height-commercial-section1-content);
+            letter-spacing: var(--font-letter-spacing-commercial-section1-content);
             text-align: left;
           }
         }
@@ -357,11 +357,11 @@ export default {
             flex-direction: column;
             align-items: center;
             .section1-card-title {
-              font-family: var(--font1);
+              font-family: var(--font-family-Arial);
               font-size: 28px;
-              font-weight: 900;
-              line-height: 45px;
-              letter-spacing: 0em;
+              font-weight: var(--font-weight-commercial-section1-card-title);
+              line-height: var(--font-line-height-commercial-section1-card-title);
+              letter-spacing: var(--font-letter-spacing-commercial-section1-card-title);
               text-align: center;
               color: #282828;
             }
@@ -379,11 +379,11 @@ export default {
             align-items: center;
             .section1-card-content {
               z-index: 15;
-              font-family: var(--font2);
+              font-family: var(--font-family-DIN);
               font-size: 22px;
-              font-weight: 700;
-              line-height: 37px;
-              letter-spacing: 0em;
+              font-weight: var(--font-weight-commercial-section1-card-content);
+              line-height: var(--font-line-height-commercial-section1-card-content);
+              letter-spacing: var(--font-letter-spacing-commercial-section1-card-content);
               text-align: center;
               color: #282828;
             }
@@ -420,20 +420,20 @@ export default {
           .section2-title {
             margin-top: 107px;
             margin-left: 96px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 36px;
-            font-weight: 900;
-            line-height: 51px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section2-title);
+            line-height: var(--font-line-height-commercial-section2-title);
+            letter-spacing: var(--font-letter-spacing-commercial-section2-title);
             text-align: left;
           }
           .section2-content {
             margin-left: 96px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 22px;
-            font-weight: 700;
-            line-height: 35px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section2-content);
+            line-height: var(--font-line-height-commercial-section2-content);
+            letter-spacing: var(--font-letter-spacing-commercial-section2-content);
             text-align: left;
             margin-top: 43px;
           }
@@ -447,7 +447,8 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        .section2-card {
+        .section2-card,
+        .section2-card-onclick {
           margin: 0 6px;
           width: 355px;
           height: 432px;
@@ -469,40 +470,44 @@ export default {
           }
           .section2-card-title {
             margin: 40px auto 0 31px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 22px;
-            font-weight: 900;
-            line-height: 35px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section2-card-title);
+            line-height: var(--font-line-height-commercial-section2-card-title);
+            letter-spacing: var(--font-letter-spacing-commercial-section2-card-title);
             text-align: left;
             color: #cf000e;
           }
           .section2-card-content {
             margin: 15px 31px 0 31px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 18px;
-            font-weight: 700;
-            line-height: 29px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section2-card-content);
+            line-height: var(--font-line-height-commercial-section2-card-content);
+            letter-spacing: var(--font-letter-spacing-commercial-section2-card-content);
             text-align: left;
           }
         }
-        .section2-card:hover {
+
+        .section2-card:hover,
+        .section2-card-onclick:hover {
           width: 370px;
           height: 485px;
-
           background: linear-gradient(0deg, #fffafa, #fffafa);
-
           border: 2px solid #cf000e;
           box-shadow: -3px 3px 5px 0px #59595940;
           border-radius: 20px;
           .section2-card-title {
             font-size: 24px;
-            line-height: 38px;
+            font-weight: var(--font-weight-commercial-section2-card-title-hover);
+            line-height: var(--font-line-height-commercial-section2-card-title-hover);
+            letter-spacing: var(--font-letter-spacing-commercial-section2-card-title-hover);
           }
           .section2-card-content {
             font-size: 20px;
-            line-height: 32px;
+            font-weight: var(--font-weight-commercial-section2-card-content-hover);
+            line-height: var(--font-line-height-commercial-section2-card-content-hover);
+            letter-spacing: var(--font-letter-spacing-commercial-section2-card-content-hover);
           }
         }
       }
@@ -520,11 +525,11 @@ export default {
         align-items: center;
         .section3-seperator-title {
           margin-top: 85px;
-          font-family: var(--font1);
+          font-family: var(--font-family-Arial);
           font-size: 36px;
-          font-weight: 900;
-          line-height: 51px;
-          letter-spacing: 0em;
+          font-weight: var(--font-weight-commercial-section3-title);
+          line-height: var(--font-line-height-commercial-section3-title);
+          letter-spacing: var(--font-letter-spacing-commercial-section3-title);
           text-align: center;
           color: #ffffff;
         }
@@ -538,11 +543,11 @@ export default {
         .section3-seperator-content {
           max-width: 1021px;
           width: 100%;
-          font-family: var(--font2);
+          font-family: var(--font-family-DIN);
           font-size: 22px;
-          font-weight: 700;
-          line-height: 35px;
-          letter-spacing: 0em;
+          font-weight: var(--font-weight-commercial-section3-content);
+          line-height: var(--font-line-height-commercial-section3-content);
+          letter-spacing: var(--font-letter-spacing-commercial-section3-content);
           text-align: center;
           color: #ffffff;
         }
@@ -569,31 +574,31 @@ export default {
             border-bottom: 3px solid;
             margin-top: 65px;
             margin-left: 65px;
-            font-family: var(--font1);
+            font-family: Arial Black;
             font-size: 40px;
-            font-weight: 900;
-            line-height: 64px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section3-content-no);
+            line-height: var(--font-line-height-commercial-section3-content-no);
+            letter-spacing: var(--font-letter-spacing-commercial-section3-content-no);
             text-align: left;
             padding-bottom: 3px;
           }
           .section3-content-title {
             margin-top: 40px;
             margin-left: 65px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 26px;
-            font-weight: 900;
-            line-height: 42px;
-            letter-spacing: 0.01em;
+            font-weight: var(--font-weight-commercial-section3-content-title);
+            line-height: var(--font-line-height-commercial-section3-content-title);
+            letter-spacing: var(--font-letter-spacing-commercial-section3-content-title);
             text-align: left;
           }
           .section3-content-content {
             margin: 28px 65px 0 65px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 22px;
-            font-weight: 700;
-            line-height: 35px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-section3-content-content);
+            line-height: var(--font-line-height-commercial-section3-content-content);
+            letter-spacing: var(--font-letter-spacing-commercial-section3-content-content);
             text-align: left;
           }
         }
@@ -622,11 +627,11 @@ export default {
           .section1-title {
             margin-left: 54px;
             margin-top: 34px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 22px;
-            font-weight: 900;
-            line-height: 31px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section1-title);
+            line-height: var(--font-line-height-commercial-mobile-section1-title);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section1-title);
             text-align: left;
             color: #282828;
           }
@@ -642,11 +647,11 @@ export default {
           .section1-content {
             margin-left: 54px;
             margin-right: 25px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 14px;
-            font-weight: 700;
-            line-height: 20px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section1-content);
+            line-height: var(--font-line-height-commercial-mobile-section1-content);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section1-content);
             text-align: left;
             color: #282828;
             margin-top: 20px;
@@ -709,11 +714,11 @@ export default {
             flex-direction: column;
             align-items: center;
             .section1-card-title {
-              font-family: var(--font1);
+              font-family: var(--font-family-Arial);
               font-size: 20px;
-              font-weight: 900;
-              line-height: 32px;
-              letter-spacing: 0em;
+              font-weight: var(--font-weight-commercial-mobile-section1-card-title);
+              line-height: var(--font-line-height-commercial-mobile-section1-card-title);
+              letter-spacing: var(--font-letter-spacing-commercial-mobile-section1-card-title);
               text-align: center;
               color: #282828;
             }
@@ -736,11 +741,11 @@ export default {
             justify-content: center;
             .section1-card-content {
               margin-top: 15px;
-              font-family: var(--font2);
+              font-family: var(--font-family-DIN);
               font-size: 16px;
-              font-weight: 700;
-              line-height: 23px;
-              letter-spacing: 0em;
+              font-weight: var(--font-weight-commercial-mobile-section1-card-content);
+              line-height: var(--font-line-height-commercial-mobile-section1-card-content);
+              letter-spacing: var(--font-letter-spacing-commercial-mobile-section1-card-content);
               text-align: center;
               color: #282828;
             }
@@ -772,22 +777,22 @@ export default {
           .section2-title {
             margin-left: 54px;
             margin-top: 39px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 22px;
-            font-weight: 900;
-            line-height: 31px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section2-title);
+            line-height: var(--font-line-height-commercial-mobile-section2-title);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section2-title);
             text-align: left;
             color: #282828;
           }
 
           .section2-content {
             margin: 20px 25px 0 54px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 14px;
-            font-weight: 700;
-            line-height: 20px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section2-content);
+            line-height: var(--font-line-height-commercial-mobile-section2-content);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section2-content);
             text-align: left;
           }
         }
@@ -831,22 +836,22 @@ export default {
           }
           .section2-card-title {
             margin: 20px auto 0 22px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 22px;
-            font-weight: 900;
-            line-height: 35px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section2-card-title);
+            line-height: var(--font-line-height-commercial-mobile-section2-card-title);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section2-card-title);
             text-align: left;
             color: #cf000e;
           }
           .section2-card-content {
             margin: 15px 21px 0 22px;
             height: 144px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 14px;
-            font-weight: 700;
-            line-height: 22px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section2-card-content);
+            line-height: var(--font-line-height-commercial-mobile-section2-card-content);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section2-card-content);
             text-align: left;
           }
         }
@@ -873,22 +878,22 @@ export default {
           }
           .section2-card-title {
             margin: 20px auto 0 27px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 24px;
-            font-weight: 900;
-            line-height: 38px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section2-card-title-hover);
+            line-height: var(--font-line-height-commercial-mobile-section2-card-title-hover);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section2-card-title-hover);
             text-align: left;
 
             color: #cf000e;
           }
           .section2-card-content {
             margin: 15px 27px 0 27px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 16px;
-            font-weight: 700;
-            line-height: 26px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section2-card-content-hover);
+            line-height: var(--font-line-height-commercial-mobile-section2-card-content-hover);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section2-card-content-hover);
             text-align: left;
             color: #282828;
           }
@@ -909,11 +914,11 @@ export default {
         .section3-seperator-title {
           margin-top: 54px;
           margin-bottom: 22px;
-          font-family: var(--font1);
+          font-family: var(--font-family-Arial);
           font-size: 22px;
-          font-weight: 900;
-          line-height: 31px;
-          letter-spacing: 0em;
+          font-weight: var(--font-weight-commercial-mobile-section3-title);
+          line-height: var(--font-line-height-commercial-mobile-section3-title);
+          letter-spacing: var(--font-letter-spacing-commercial-mobile-section3-title);
           text-align: center;
 
           color: #ffffff;
@@ -923,11 +928,11 @@ export default {
         .section3-seperator-content {
           max-width: 90vw;
           width: 100%;
-          font-family: var(--font2);
+          font-family: var(--font-family-DIN);
           font-size: 14px;
-          font-weight: 700;
-          line-height: 22px;
-          letter-spacing: 0em;
+          font-weight: var(--font-weight-commercial-mobile-section3-content);
+          line-height: var(--font-line-height-commercial-mobile-section3-content);
+          letter-spacing: var(--font-letter-spacing-commercial-mobile-section3-content);
           text-align: center;
           color: #ffffff;
         }
@@ -961,31 +966,31 @@ export default {
             border-bottom: 3px solid;
             margin-top: 29px;
             margin-left: 29px;
-            font-family: var(--font1);
+            font-family: Arial Black;
             font-size: 30px;
-            font-weight: 900;
-            line-height: 48px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section3-content-no);
+            line-height: var(--font-line-height-commercial-mobile-section3-content-no);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section3-content-no);
             text-align: left;
             padding-bottom: 3px;
           }
           .section3-content-title {
             margin-top: 29px;
             margin-left: 29px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             font-size: 20px;
-            font-weight: 900;
-            line-height: 28px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section3-content-title);
+            line-height: var(--font-line-height-commercial-mobile-section3-content-title);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section3-content-title);
             text-align: left;
           }
           .section3-content-content {
             margin: 29px 30px 0 29px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 15px;
-            font-weight: 700;
-            line-height: 22px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-commercial-mobile-section3-content-content);
+            line-height: var(--font-line-height-commercial-mobile-section3-content-content);
+            letter-spacing: var(--font-letter-spacing-commercial-mobile-section3-content-content);
             text-align: left;
           }
         }

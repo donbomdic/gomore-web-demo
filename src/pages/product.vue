@@ -365,21 +365,21 @@ export default {
 
           .section1-card-title {
             margin-top: 175px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             color: #ffffff;
             font-size: 22px;
-            font-weight: 900;
-            line-height: 31px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-products-section1-card-title);
+            line-height: var(--font-line-height-products-section1-card-title);
+            letter-spacing: var(--font-letter-spacing-products-section1-card-title);
           }
           .section1-card-content {
             opacity: 0;
             margin: 30px 27px 0 27px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 17px;
-            font-weight: 700;
-            line-height: 24px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-products-section1-card-content);
+            line-height: var(--font-line-height-products-section1-card-content);
+            letter-spacing: var(--font-letter-spacing-products-section1-card-content);
           }
         }
         .card1:hover {
@@ -494,21 +494,21 @@ export default {
                   flex-direction: column;
                   .section2-card-title {
                     margin-bottom: 25px;
-                    font-family: var(--font1);
+                    font-family: var(--font-family-Arial);
                     font-size: 32px;
-                    font-weight: 900;
-                    line-height: 45px;
-                    letter-spacing: 0em;
+                    font-weight: var(--font-weight-products-section2-card-title);
+                    line-height: var(--font-line-height-products-section2-card-title);
+                    letter-spacing: var(--font-letter-spacing-products-section2-card-title);
                     text-align: left;
                     color: #cf000e;
                   }
                   .section2-card-subtitle {
                     margin-bottom: 18px;
-                    font-family: var(--font1);
+                    font-family: var(--font-family-Arial);
                     font-size: 20px;
-                    font-weight: 900;
-                    line-height: 34px;
-                    letter-spacing: 0em;
+                    font-weight: var(--font-weight-products-section2-card-subtitle);
+                    line-height: var(--font-line-height-products-section2-card-subtitle);
+                    letter-spacing: var(--font-letter-spacing-products-section2-card-subtitle);
                     text-align: left;
                   }
                   ul {
@@ -518,11 +518,11 @@ export default {
                     margin-bottom: 32px;
                     li {
                       margin-right: 10px;
-                      font-family: var(--font2);
+                      font-family: var(--font-family-DIN);
                       font-size: 16px;
-                      font-weight: 700;
-                      line-height: 30px;
-                      letter-spacing: 0em;
+                      font-weight: var(--font-weight-products-section2-card-subtitle-li);
+                      line-height: var(--font-line-height-products-section2-card-subtitle-li);
+                      letter-spacing: var(--font-letter-spacing-products-section2-card-subtitle-li);
                       text-align: left;
                     }
                   }
@@ -547,11 +547,11 @@ export default {
         justify-content: center;
         align-items: center;
         .section3-card-title {
-          font-family: var(--font1);
+          font-family: var(--font-family-Arial);
           font-size: 32px;
-          font-weight: 900;
-          line-height: 45px;
-          letter-spacing: 0em;
+          font-weight: var(--font-weight-products-section3-card-title);
+          line-height: var(--font-line-height-products-section3-card-title);
+          letter-spacing: var(--font-letter-spacing-products-section3-card-title);
           text-align: center;
         }
         .section3-card-container {
@@ -578,11 +578,11 @@ export default {
             }
             .section3-card-content {
               max-width: 141px;
-              font-family: var(--font2);
+              font-family: var(--font-family-DIN);
               font-size: 20px;
-              font-weight: 700;
-              line-height: 26px;
-              letter-spacing: 0em;
+              font-weight: var(--font-weight-products-section3-card-content);
+              line-height: var(--font-line-height-products-section3-card-content);
+              letter-spacing: var(--font-letter-spacing-products-section3-card-content);
               text-align: center;
             }
           }
@@ -599,11 +599,11 @@ export default {
     }
     .section-title {
       margin-bottom: 35px;
-      font-family: var(--font1);
+      font-family: var(--font-family-Arial);
       font-size: 36px;
-      font-weight: 900;
-      line-height: 51px;
-      letter-spacing: 0em;
+      font-weight: var(--font-weight-products-section-title);
+      line-height: var(--font-line-height-products-section-title);
+      letter-spacing: var(--font-letter-spacing-products-section-title);
       text-align: center;
       color: #ffffff;
     }
@@ -611,11 +611,11 @@ export default {
       max-width: 1021px;
       width: 100%;
       margin: 0 172px;
-      font-family: var(--font2);
+      font-family: var(--font-family-DIN);
       font-size: 22px;
-      font-weight: 700;
-      line-height: 35px;
-      letter-spacing: 0.02em;
+      font-weight: var(--font-weight-products-section-content);
+      line-height: var(--font-line-height-products-section-content);
+      letter-spacing: var(--font-letter-spacing-products-section-content);
       text-align: center;
       color: #ffffff;
     }
@@ -665,21 +665,21 @@ export default {
 
           .section1-card-title {
             margin-bottom: 20px;
-            font-family: var(--font1);
+            font-family: var(--font-family-Arial);
             color: #ffffff;
             font-size: 20px;
-            font-weight: 900;
-            line-height: 28px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-products-mobile-section1-card-title);
+            line-height: var(--font-line-height-products-mobile-section1-card-title);
+            letter-spacing: var(--font-letter-spacing-products-mobile-section1-card-title);
             text-align: center;
           }
           .section1-card-content {
             margin: 10px 27px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 14px;
-            font-weight: 700;
-            line-height: 20px;
-            letter-spacing: 0em;
+            font-weight: var(--font-weight-products-mobile-section1-card-content);
+            line-height: var(--font-line-height-products-mobile-section1-card-content);
+            letter-spacing: var(--font-letter-spacing-products-mobile-section1-card-content);
             text-align: left;
 
             color: #ffffff;
@@ -773,21 +773,21 @@ export default {
                   align-items: flex-start;
                   .section2-card-title {
                     margin-bottom: 15px;
-                    font-family: var(--font1);
+                    font-family: var(--font-family-Arial);
                     font-size: 20px;
-                    font-weight: 900;
-                    line-height: 28px;
-                    letter-spacing: 0em;
+                    font-weight: var(--font-weight-products-mobile-section2-card-title);
+                    line-height: var(--font-line-height-products-mobile-section2-card-title);
+                    letter-spacing: var(--font-letter-spacing-products-mobile-section2-card-title);
                     text-align: left;
                     color: #cf000e;
                   }
                   .section2-card-subtitle {
                     margin-bottom: 18px;
-                    font-family: var(--font1);
+                    font-family: var(--font-family-Arial);
                     font-size: 14px;
-                    font-weight: 900;
-                    line-height: 24px;
-                    letter-spacing: 0em;
+                    font-weight: var(--font-weight-products-mobile-section2-card-subtitle);
+                    line-height: var(--font-line-height-products-mobile-section2-card-subtitle);
+                    letter-spacing: var(--font-letter-spacing-products-mobile-section2-card-subtitle);
                     text-align: left;
                   }
                   ul {
@@ -807,11 +807,11 @@ export default {
                     }
                     li {
                       margin-bottom: 5px;
-                      font-family: var(--font2);
+                      font-family: var(--font-family-DIN);
                       font-size: 14px;
-                      font-weight: 700;
-                      line-height: 24px;
-                      letter-spacing: 0em;
+                      font-weight: var(--font-weight-products-mobile-section2-card-subtitle-li);
+                      line-height: var(--font-line-height-products-mobile-section2-card-subtitle-li);
+                      letter-spacing: var(--font-letter-spacing-products-mobile-section2-card-subtitle-li);
                       text-align: left;
                     }
                   }
@@ -835,11 +835,11 @@ export default {
         justify-content: center;
         align-items: center;
         .section3-card-title {
-          font-family: var(--font1);
+          font-family: var(--font-family-Arial);
           font-size: 18px;
-          font-weight: 900;
-          line-height: 25px;
-          letter-spacing: 0em;
+          font-weight: var(--font-weight-products-mobile-section3-card-title);
+          line-height: var(--font-line-height-products-mobile-section3-card-title);
+          letter-spacing: var(--font-letter-spacing-products-mobile-section3-card-title);
           text-align: center;
         }
         .section3-card-container {
@@ -865,11 +865,11 @@ export default {
               margin: 20px 10px 20px 10px;
             }
             .section3-card-content {
-              font-family: var(--font2);
+              font-family: var(--font-family-DIN);
               font-size: 12px;
-              font-weight: 700;
-              line-height: 16px;
-              letter-spacing: 0em;
+              font-weight: var(--font-weight-products-mobile-section3-card-content);
+              line-height: var(--font-line-height-products-mobile-section3-card-content);
+              letter-spacing: var(--font-letter-spacing-products-mobile-section3-card-content);
               text-align: center;
             }
           }
@@ -886,22 +886,22 @@ export default {
     }
     .section-title {
       margin: 0 21px;
-      font-family: var(--font1);
+      font-family: var(--font-family-Arial);
       font-size: 22px;
-      font-weight: 900;
-      line-height: 31px;
-      letter-spacing: 0em;
+      font-weight: var(--font-weight-products-mobile-section-title);
+      line-height: var(--font-line-height-products-mobile-section-title);
+      letter-spacing: var(--font-letter-spacing-products-mobile-section-title);
       text-align: center;
       margin-bottom: 35px;
       color: #ffffff;
     }
     .section-content {
       margin: 5px 21px;
-      font-family: var(--font2);
+      font-family: var(--font-family-DIN);
       font-size: 14px;
-      font-weight: 700;
-      line-height: 19px;
-      letter-spacing: 0em;
+      font-weight: var(--font-weight-products-mobile-section-content);
+      line-height: var(--font-line-height-products-mobile-section-content);
+      letter-spacing: var(--font-letter-spacing-products-mobile-section-content);
       text-align: center;
 
       color: #ffffff;

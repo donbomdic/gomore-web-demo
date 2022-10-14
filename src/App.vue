@@ -17,8 +17,8 @@ export default {
   setup() {
     const isZH = ref(false);
 
-    if (window.location.pathname.slice(1, 3) === "tw") {
-      ("./assets/style.zh.css");
+    if (["tw", "cn"].includes(window.location.pathname.slice(1, 3))) {
+      console.log("yes");
       isZH.value = true;
     }
 
@@ -28,24 +28,5 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: GenYoGothic JP;
-  src: url("./assets/GenYoGothicJP-N.ttf") format("truetype");
-}
-
-:root {
-  --font1: Arial Black;
-  --font2: DIN Alternate;
-}
-
-.zh-lang {
-  --font1: GenYoGothic JP;
-  --font1: GenYoGothic JP;
-}
-
-html,
-body {
-  margin: 0 auto;
-  width: 100%;
-}
+@import url("./assets/global.css");
 </style>

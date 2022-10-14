@@ -45,7 +45,7 @@ ul {
     font-size: 16px;
     font-weight: 500;
     line-height: 16px;
-    font-family: var(--font2);
+    font-family: var(--font-family-DIN);
     color: #ffffff;
   }
   li {
@@ -54,7 +54,7 @@ ul {
     font-size: 16px;
     font-weight: 500;
     line-height: 16px;
-    font-family: var(--font2);
+    font-family: var(--font-family-DIN);
     color: #ffffff;
   }
 }

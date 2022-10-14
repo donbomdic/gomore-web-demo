@@ -221,11 +221,11 @@ export default {
       a {
         margin: auto 10px auto 55px;
         text-decoration: none;
-        font-family: var(--font2);
+        font-family: var(--font-family-DIN);
         font-size: 20px;
-        font-weight: 700;
-        line-height: 23px;
-        letter-spacing: 0em;
+        font-weight: var(--font-nav-weight);
+        line-height: var(--font-nav-line-height);
+        letter-spacing: var(--font-nav-letter-spacing);
         text-align: center;
         color: #ffffff;
       }
@@ -260,13 +260,13 @@ export default {
       a {
         margin: auto 10px auto 55px;
         text-decoration: none;
-        font-family: var(--font2);
+        font-family: var(--font-family-DIN);
         font-style: normal;
         font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 0em;
+        font-weight: va(--font-nav-weight);
+        letter-spacing: var(--font-nav-letter-spacing);
         text-align: left;
-        line-height: 23px;
+        line-height: var(--font-nav-line-height);
         color: #ffffff;
       }
       a:hover {
@@ -302,12 +302,12 @@ export default {
       a {
         margin: auto -5px auto 34px;
         text-decoration: none;
-        font-family: var(--font2);
+        font-family: var(--font-family-DIN);
         font-style: normal;
-        font-weight: 700;
+        font-weight: var(--font-nav-weight);
         font-size: 20px;
-        line-height: 23px;
-        letter-spacing: 0em;
+        line-height: var(--font-nav-line-height);
+        letter-spacing: var(--font-nav-letter-spacing);
         text-align: left;
         color: #ffffff;
       }
@@ -368,7 +368,7 @@ export default {
         border-bottom: 2px solid #ffffff;
         a {
           text-decoration: none;
-          font-family: var(--font1);
+          font-family: var(--font-family-Arial);
           font-size: 15px;
           font-weight: 900;
           line-height: 21px;
@@ -402,7 +402,7 @@ export default {
           margin-left: 39px;
           a {
             margin-bottom: 20px;
-            font-family: var(--font2);
+            font-family: var(--font-family-DIN);
             font-size: 14px;
             font-weight: 700;
             line-height: 16px;
