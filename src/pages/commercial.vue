@@ -407,7 +407,7 @@ export default {
           bottom: 0;
           right: 0;
           width: 615px;
-          height: 1px;
+          height: 2px;
           margin-top: 173px;
           background: #cf000e;
         }
@@ -635,13 +635,15 @@ export default {
             margin-left: 32px;
             position: absolute;
             height: 378px;
-            border: 1.5px solid #cf000e;
+            width: 1.5px;
+            background: #cf000e;
+            // border: 1px solid #cf000e;
           }
           .section1-content {
             margin-left: 54px;
             margin-right: 25px;
             font-family: var(--font2);
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             line-height: 20px;
             letter-spacing: 0em;
@@ -737,7 +739,7 @@ export default {
               font-family: var(--font2);
               font-size: 16px;
               font-weight: 700;
-              line-height: 24px;
+              line-height: 23px;
               letter-spacing: 0em;
               text-align: center;
               color: #282828;
@@ -759,7 +761,8 @@ export default {
           margin-left: 32px;
           position: absolute;
           height: 300px;
-          border: 1.5px solid #cf000e;
+          width: 1.5px;
+          background: #cf000e;
         }
         .section2-content-container {
           height: 220px;
@@ -781,7 +784,7 @@ export default {
           .section2-content {
             margin: 20px 25px 0 54px;
             font-family: var(--font2);
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             line-height: 20px;
             letter-spacing: 0em;
@@ -840,7 +843,7 @@ export default {
             margin: 15px 21px 0 22px;
             height: 144px;
             font-family: var(--font2);
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             line-height: 22px;
             letter-spacing: 0em;
@@ -876,6 +879,7 @@ export default {
             line-height: 38px;
             letter-spacing: 0em;
             text-align: left;
+
             color: #cf000e;
           }
           .section2-card-content {
@@ -911,6 +915,7 @@ export default {
           line-height: 31px;
           letter-spacing: 0em;
           text-align: center;
+
           color: #ffffff;
           padding-bottom: 10px;
           border-bottom: 1.5px solid white;
@@ -919,7 +924,7 @@ export default {
           max-width: 90vw;
           width: 100%;
           font-family: var(--font2);
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 700;
           line-height: 22px;
           letter-spacing: 0em;
@@ -977,9 +982,9 @@ export default {
           .section3-content-content {
             margin: 29px 30px 0 29px;
             font-family: var(--font2);
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
-            line-height: 21px;
+            line-height: 22px;
             letter-spacing: 0em;
             text-align: left;
           }

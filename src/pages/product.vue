@@ -88,7 +88,9 @@
                     {{ $t("product.section2.card.content1-1") }}
                   </div>
                   <ul>
-                    <li>{{ $t("product.section2.card.content1-2") }}</li>
+                    <li>
+                      {{ $t("product.section2.card.content1-2") }}
+                    </li>
                     <li>{{ $t("product.section2.card.content1-3") }}</li>
                     <li>{{ $t("product.section2.card.content1-4") }}</li>
                     <li>{{ $t("product.section2.card.content1-5") }}</li>
@@ -363,7 +365,6 @@ export default {
 
           .section1-card-title {
             margin-top: 175px;
-            margin-bottom: 30px;
             font-family: var(--font1);
             color: #ffffff;
             font-size: 22px;
@@ -666,18 +667,21 @@ export default {
             margin-bottom: 20px;
             font-family: var(--font1);
             color: #ffffff;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 900;
-            line-height: 31px;
+            line-height: 28px;
             letter-spacing: 0em;
+            text-align: center;
           }
           .section1-card-content {
             margin: 10px 27px;
             font-family: var(--font2);
-            font-size: 17px;
+            font-size: 14px;
             font-weight: 700;
-            line-height: 24px;
+            line-height: 20px;
             letter-spacing: 0em;
+            text-align: left;
+
             color: #ffffff;
           }
         }
@@ -699,7 +703,7 @@ export default {
           top: 0;
           bottom: 0;
           left: 0;
-          width: 50px;
+          width: 28px;
           cursor: pointer;
           position: absolute;
           margin: auto auto auto 5px;
@@ -709,7 +713,7 @@ export default {
           top: 0;
           bottom: 0;
           right: 0;
-          width: 50px;
+          width: 28px;
           cursor: pointer;
           position: absolute;
           margin: auto 5px auto auto;
@@ -762,6 +766,7 @@ export default {
                 width: 100%;
                 .section2-card-content {
                   margin-left: 56px;
+                  margin-right: 38px;
                   display: flex;
                   flex-direction: column;
                   justify-content: center;
@@ -774,32 +779,39 @@ export default {
                     line-height: 28px;
                     letter-spacing: 0em;
                     text-align: left;
-
                     color: #cf000e;
                   }
                   .section2-card-subtitle {
                     margin-bottom: 18px;
                     font-family: var(--font1);
                     font-size: 14px;
-                    font-weight: 700;
+                    font-weight: 900;
                     line-height: 24px;
-                    letter-spacing: 0.06em;
+                    letter-spacing: 0em;
                     text-align: left;
                   }
                   ul {
                     margin-top: 0px;
+                    padding-left: 20px;
                     list-style-type: disc;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     margin-bottom: 22px;
+                    .circle {
+                      display: inline-block;
+                      border-radius: 180px;
+                      height: 8px;
+                      width: 8px;
+                      background: #bebebe;
+                    }
                     li {
                       margin-bottom: 5px;
-                      font-family: var(--font1);
+                      font-family: var(--font2);
                       font-size: 14px;
-                      font-weight: 500;
+                      font-weight: 700;
                       line-height: 24px;
-                      letter-spacing: 0.04em;
+                      letter-spacing: 0em;
                       text-align: left;
                     }
                   }
@@ -812,7 +824,7 @@ export default {
     }
     #section3 {
       .section-banner {
-        margin: 80px 0px 30px 0px;
+        margin: 32px 0px 30px 0px;
         background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator3-mobile.png");
       }
       .section3-container {
@@ -824,9 +836,9 @@ export default {
         align-items: center;
         .section3-card-title {
           font-family: var(--font1);
-          font-size: 22px;
+          font-size: 18px;
           font-weight: 900;
-          line-height: 45px;
+          line-height: 25px;
           letter-spacing: 0em;
           text-align: center;
         }
@@ -852,9 +864,8 @@ export default {
               width: 40%;
               margin: 20px 10px 20px 10px;
             }
-            div {
+            .section3-card-content {
               font-family: var(--font2);
-              font-family: DIN Alternate;
               font-size: 12px;
               font-weight: 700;
               line-height: 16px;
@@ -887,11 +898,12 @@ export default {
     .section-content {
       margin: 5px 21px;
       font-family: var(--font2);
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
       line-height: 19px;
       letter-spacing: 0em;
       text-align: center;
+
       color: #ffffff;
     }
   }
