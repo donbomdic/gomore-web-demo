@@ -1,7 +1,7 @@
 import { createI18n } from "vue-i18n";
 import en from "../lang/en.json";
-import tw from "../lang/zh-TW.json";
-import cn from "../lang/zh-CN.json";
+import tw from "../lang/tw.json";
+import cn from "../lang/cn.json";
 // import messages from "@intlify/vite-plugin-vue-i18n/messages";
 
 let browserLanguage = window.navigator.language;
