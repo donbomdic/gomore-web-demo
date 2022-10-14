@@ -25,6 +25,8 @@ body {
   --font-nav-weight: 500;
   --font-nav-line-height: 20px;
   --font-nav-letter-spacing: 0.1rem;
+  --commercial-nav-space-max-width: 335px;
+  --commercial-nav-item-max-width: 749px;
 
   /* zh lang for Nav Mobile */
 
@@ -229,12 +231,13 @@ body {
 :root {
   --font-family-Arial: Arial Black;
   --font-family-DIN: DIN Alternate;
-  /* --var-commercial-margin: ; */
 
   /* Root for Nav Web */
   --font-nav-weight: 700;
   --font-nav-line-height: 23.28px;
   --font-nav-letter-spacing: 0rem;
+  --commercial-nav-space-max-width: 367px;
+  --commercial-nav-item-max-width: 717px;
 
   /* Root for Nav Mobile */
 

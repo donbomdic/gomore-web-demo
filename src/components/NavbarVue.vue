@@ -288,11 +288,11 @@ export default {
     display: flex;
 
     .space-commercial {
-      max-width: 367px;
+      max-width: var(--commercial-nav-space-max-width);
       width: 100%;
     }
     .nav-item-commercial {
-      max-width: 717px;
+      max-width: var(--commercial-nav-item-max-width);
       width: 100%;
       height: 66px;
       background: #860009;
