@@ -43,16 +43,26 @@ const routes = [
         component: Commercial,
       },
       {
-        path: "404",
+        path: "news",
         name: "News",
-        component: NotFound,
+        beforeEnter() {
+          location.href = "https://www.gomore.me/en/news/";
+        },
       },
       {
-        path: "404",
+        path: "aboutus",
         name: "About Us",
-        component: NotFound,
+        beforeEnter() {
+          location.href = "https://www.gomore.me/en/about-us/";
+        },
       },
-      { path: "404", name: "Contact Us", component: NotFound },
+      {
+        path: "contactus",
+        name: "Contact Us",
+        beforeEnter() {
+          location.href = "https://www.gomore.me/en/contact-us/";
+        },
+      },
       {
         path: "404",
         name: "NotFound",

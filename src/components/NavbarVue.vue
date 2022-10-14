@@ -89,10 +89,10 @@
       <router-link :to="'/' + $i18n.locale + '/commercial'" @mouseenter="(hoverNav2 = true), (hoverNav = false)">{{
         $t("navbar.title2")
       }}</router-link>
-      <div v-show="hoverNav2 === true" class="nav-item-solution-wrapper">
-        <div class="space-solution"></div>
+      <div v-show="hoverNav2 === true" class="nav-item-commercial-wrapper">
+        <div class="space-commercial"></div>
         <div
-          class="nav-item-solution"
+          class="nav-item-commercial"
           @mouseenter="(hoverNav2 = true), (hoverNav = false)"
           @mouseleave="hoverNav2 = false"
         >
@@ -101,13 +101,13 @@
           <router-link :to="'/' + $i18n.locale + '/commercial/#section3'">{{ $t("navbar.content2-3") }}</router-link>
         </div>
       </div>
-      <router-link :to="'/' + $i18n.locale + '/404'" @mouseenter="(hoverNav = false), (hoverNav2 = false)">{{
+      <router-link :to="'/' + $i18n.locale + '/news'" @mouseenter="(hoverNav = false), (hoverNav2 = false)">{{
         $t("navbar.title3")
       }}</router-link>
-      <router-link :to="'/' + $i18n.locale + '/404'" @mouseenter="(hoverNav = false), (hoverNav2 = false)">{{
+      <router-link :to="'/' + $i18n.locale + '/aboutus'" @mouseenter="(hoverNav = false), (hoverNav2 = false)">{{
         $t("navbar.title4")
       }}</router-link>
-      <router-link :to="'/' + $i18n.locale + '/404'" @mouseenter="(hoverNav = false), (hoverNav2 = false)">{{
+      <router-link :to="'/' + $i18n.locale + '/contactus'" @mouseenter="(hoverNav = false), (hoverNav2 = false)">{{
         $t("navbar.title5")
       }}</router-link>
     </div>
@@ -133,26 +133,26 @@
         <div class="nav-item-title">
           <router-link :to="'/' + $i18n.locale + '/commercial'">{{ $t("navbar.title2") }} </router-link
           ><img
-            @click="isSolutionSection = !isSolutionSection"
-            :class="{ 'section-open': isSolutionSection }"
+            @click="isCommercialSection = !isCommercialSection"
+            :class="{ 'section-open': isCommercialSection }"
             src="./asset/Icon-2.png"
             alt="menu-open"
           />
         </div>
-        <div v-show="isSolutionSection" class="nav-item-section-wrapper">
+        <div v-show="isCommercialSection" class="nav-item-section-wrapper">
           <router-link :to="'/' + $i18n.locale + '/commercial/#section1'">{{ $t("navbar.content2-1") }}</router-link>
           <router-link :to="'/' + $i18n.locale + '/commercial/#section2'">{{ $t("navbar.content2-2") }}</router-link>
           <router-link :to="'/' + $i18n.locale + '/commercial/#section3'">{{ $t("navbar.content2-3") }}</router-link>
         </div>
       </div>
       <div class="nav-item-wrapper">
-        <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title3") }}</router-link>
+        <router-link :to="'/' + $i18n.locale + '/news'">{{ $t("navbar.title3") }}</router-link>
       </div>
       <div class="nav-item-wrapper">
-        <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title4") }}</router-link>
+        <router-link :to="'/' + $i18n.locale + '/aboutus'">{{ $t("navbar.title4") }}</router-link>
       </div>
       <div class="nav-item-wrapper">
-        <router-link :to="'/' + $i18n.locale + '/404'">{{ $t("navbar.title5") }}</router-link>
+        <router-link :to="'/' + $i18n.locale + '/contactus'">{{ $t("navbar.title5") }}</router-link>
       </div>
     </div>
   </div>
@@ -171,13 +171,13 @@ export default {
     const navMenu = ref(false);
     const size = ref(window.innerWidth);
     const isProductSection = ref(false);
-    const isSolutionSection = ref(false);
+    const isCommercialSection = ref(false);
 
     function sizeEventHandler(e) {
       size.value = e.target.innerWidth;
     }
 
-    return { router, hoverNav, hoverNav2, navMenu, size, sizeEventHandler, isProductSection, isSolutionSection };
+    return { router, hoverNav, hoverNav2, navMenu, size, sizeEventHandler, isProductSection, isCommercialSection };
   },
   created() {
     window.addEventListener("resize", this.sizeEventHandler);
@@ -275,7 +275,7 @@ export default {
     }
   }
 
-  .nav-item-solution-wrapper {
+  .nav-item-commercial-wrapper {
     max-width: 1084px;
     width: 100%;
     margin: auto;
@@ -287,11 +287,11 @@ export default {
     position: absolute;
     display: flex;
 
-    .space-solution {
+    .space-commercial {
       max-width: 367px;
       width: 100%;
     }
-    .nav-item-solution {
+    .nav-item-commercial {
       max-width: 717px;
       width: 100%;
       height: 66px;
