@@ -50,14 +50,14 @@
           class="left"
           src="./assets/product-left.png"
           alt="product-left"
-          @click="carouselCount(-1), scrollCard(-1)"
+          @click="carouselCount(-1)"
         />
         <img
           v-show="count === 0 || count === 1"
           class="right"
           src="./assets/product-right.png"
           alt="product-right"
-          @click="carouselCount(1), scrollCard(1)"
+          @click="carouselCount(1)"
         />
         <div ref="cardWrapper" class="section2-card-wrapper" @scroll="handleScroll()">
           <!-- Card 1-->
@@ -280,37 +280,22 @@ export default {
     }
 
     function carouselCount(num) {
-      if (num === 1) {
-        if (count.value < 2) {
-          count.value += 1;
-        } else {
-          count.value -= 2;
-        }
-      } else {
-        if (count.value > 0) {
-          count.value -= 1;
-        } else {
-          count.value += 2;
-        }
+      if (num === -1 && count.value > 0) {
+        count.value -= 1;
+        scrolled.value.scrollLeft -= scrolled.value.scrollWidth / 3;
       }
-    }
-
-    function scrollCard(num) {
-      let scrollContent = document.querySelector(".section2-card-wrapper");
-      if (num === 1) {
-        scrollContent.scrollLeft += scrollContent.scrollWidth / 2;
-      } else {
-        scrollContent.scrollLeft -= scrollContent.scrollWidth / 2;
+      if (num === 1 && count.value < 2) {
+        count.value += 1;
+        scrolled.value.scrollLeft += scrolled.value.scrollWidth / 3;
       }
+      console.log(count.value);
     }
 
     function handleScroll() {
-      console.log(scrolled.value.scrollLeft);
-      console.log(scrolled.value.scrollWidth);
       if (scrolled.value.scrollLeft === 0) {
         count.value = 0;
       }
-      if (0 < scrolled.value.scrollLeft * 2 < scrolled.value.scrollWidth / 2) {
+      if (scrolled.value.scrollLeft > 0 && scrolled.value.scrollLeft < (scrolled.value.scrollWidth / 3) * 2) {
         count.value = 1;
       }
       if (scrolled.value.scrollLeft === (scrolled.value.scrollWidth / 3) * 2) {
@@ -318,7 +303,7 @@ export default {
       }
     }
 
-    return { isMobile, count, cardWrapper, resizeEventHandler, carouselCount, scrollCard, handleScroll };
+    return { isMobile, count, cardWrapper, resizeEventHandler, carouselCount, handleScroll };
   },
   created() {
     window.addEventListener("resize", this.resizeEventHandler);
