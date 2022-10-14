@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/gomore-web-demo/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gomore Web</title>
+    <title>GoMore</title>
     <link href="https://fonts.cdnfonts.com/css/din-alternate" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/arial" rel="stylesheet" />
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAuRJREFUeNrsWU1IG0EYTYwIwspaQRCk0UBPoiU9NxJ7tqBezaH1prlob/WkPdlb24vtLXqIHm2hejUh3g21CIWCmiIEBHUlIAhSX7p0u53d+dnZ2U3ALB6i7s6+ed/73vd9k+h+pCvSfFdbpCmvFiwvV7va5bSxUfNDrVBqGKyOwbg++VxLpzoGBzqTI84brssHwFcr7hmfv3paOSqXiT0vMz0vMtpYSvD+20sDyKpvVm6OK4HAQpjiuY/gSY7gs/erAAeUymDFuvX+d2/Bk0/9AdPR1DRbfKKwgOnR7o6rgMw31WVU/PemmK53Jh8zonz66jWY8wWLhgloztfy5+t5YKI9i5zQJ8ZdOcazlZk5SVg0TJAItstViZWzfUuLTnA/njx13RLfTqEnAhOyCctVl1cEMZmPgJifz8btmYi/0GjmwEIIiC1iIdoWuRdkbj1bj/5aXlJbQ0ff7V4Aeg4Tw+Ik0VTRu5AF2ZI1ETwR/oTE9onJ3BsbEwdW73yWSByflU5BBwGZE0qH0zS+sYHYCar8h08BLC09av/V+LIdZr9FzcTk7yu7SA8ePGx8d0okoJxLBQFr4D8bLJaaAlZrxLjPkw/NmeO5T64tJHoK18oROFsorIy21lsQb45PGNYq3ilgGMEPPqgJIjE2ed0rO3C+tFUr7FkDAraLEik+guJ+tMioDVjEadQiwxwdVrFkn1swJojDMkcu13/1LS8CsbxBECCgXAmJqPct1EGiFGLWaAo7PfuwShBmHcg0EhZaPyIlE1sb4YSSY6dEo2yOsiEg48CC8Antw4owpQUdTX7xcc6+fzjbRgYER1ubiAlVZmad8wVG0JGLX6gtxDASbC/vLCaJrU2GQYPRuq07zpLY/k7rILwduynnRkFjY5YUSE3w/DPU7hRmdpgYZpwBhaotmuDgFFo6BQ1x+wKrm7guf7s1jMjf43HXYT2q9qsou5/VXy97PhBtfUPWghXQdSfAAO8zY9JdspU/AAAAAElFTkSuQmCC" sizes="32x32" />
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAuRJREFUeNrsWU1IG0EYTYwIwspaQRCk0UBPoiU9NxJ7tqBezaH1prlob/WkPdlb24vtLXqIHm2hejUh3g21CIWCmiIEBHUlIAhSX7p0u53d+dnZ2U3ALB6i7s6+ed/73vd9k+h+pCvSfFdbpCmvFiwvV7va5bSxUfNDrVBqGKyOwbg++VxLpzoGBzqTI84brssHwFcr7hmfv3paOSqXiT0vMz0vMtpYSvD+20sDyKpvVm6OK4HAQpjiuY/gSY7gs/erAAeUymDFuvX+d2/Bk0/9AdPR1DRbfKKwgOnR7o6rgMw31WVU/PemmK53Jh8zonz66jWY8wWLhgloztfy5+t5YKI9i5zQJ8ZdOcazlZk5SVg0TJAItstViZWzfUuLTnA/njx13RLfTqEnAhOyCctVl1cEMZmPgJifz8btmYi/0GjmwEIIiC1iIdoWuRdkbj1bj/5aXlJbQ0ff7V4Aeg4Tw+Ik0VTRu5AF2ZI1ETwR/oTE9onJ3BsbEwdW73yWSByflU5BBwGZE0qH0zS+sYHYCar8h08BLC09av/V+LIdZr9FzcTk7yu7SA8ePGx8d0okoJxLBQFr4D8bLJaaAlZrxLjPkw/NmeO5T64tJHoK18oROFsorIy21lsQb45PGNYq3ilgGMEPPqgJIjE2ed0rO3C+tFUr7FkDAraLEik+guJ+tMioDVjEadQiwxwdVrFkn1swJojDMkcu13/1LS8CsbxBECCgXAmJqPct1EGiFGLWaAo7PfuwShBmHcg0EhZaPyIlE1sb4YSSY6dEo2yOsiEg48CC8Antw4owpQUdTX7xcc6+fzjbRgYER1ubiAlVZmad8wVG0JGLX6gtxDASbC/vLCaJrU2GQYPRuq07zpLY/k7rILwduynnRkFjY5YUSE3w/DPU7hRmdpgYZpwBhaotmuDgFFo6BQ1x+wKrm7guf7s1jMjf43HXYT2q9qsou5/VXy97PhBtfUPWghXQdSfAAO8zY9JdspU/AAAAAElFTkSuQmCC" sizes="192x192" />
     <!-- <script async src=“https://www.googletagmanager.com/gtag/js?id=G-YW1PFYS3YD”></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,8 +15,8 @@
         gtag('js', new Date());
         gtag('config', 'G-YW1PFYS3YD');
     </script> -->
-    <script type="module" crossorigin src="/gomore-web-demo/assets/index.339f3f96.js"></script>
-    <link rel="stylesheet" href="/gomore-web-demo/assets/index.5dde411a.css">
+    <script type="module" crossorigin src="/gomore-web-demo/assets/index.67094db7.js"></script>
+    <link rel="stylesheet" href="/gomore-web-demo/assets/index.9bb324b1.css">
   </head>
   <body>
     <div id="app"></div>
