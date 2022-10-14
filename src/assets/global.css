@@ -228,7 +228,7 @@ body {
 }
 
 /* Root variables */
-:root {
+.en-lang {
   --font-family-Arial: Arial Black;
   --font-family-DIN: DIN Alternate;
 
