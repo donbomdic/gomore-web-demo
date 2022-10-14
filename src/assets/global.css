@@ -1,12 +1,12 @@
 @font-face {
   font-family: GenYoGothic JP;
-  src: url("./assets/GenYoGothic-M.woff") format("woff");
+  src: url("./GenYoGothic-M.woff") format("woff");
   font-weight: 500;
 }
 
 @font-face {
   font-family: GenYoGothic JP;
-  src: url("./assets/GenYoGothic-B.woff") format("woff");
+  src: url("./GenYoGothic-B.woff") format("woff");
   font-weight: 700;
 }
 
