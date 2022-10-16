@@ -1,4 +1,11 @@
 @font-face {
+  font-family: din alternate;
+  font-style: normal;
+  font-weight: 700;
+  src: local("DIN Alternate"), url(https://fonts.cdnfonts.com/s/14503/DINAlternate-Bold.woff) format("woff");
+}
+
+@font-face {
   font-family: GenYoGothic JP;
   src: url("./GenYoGothic-M.woff") format("woff");
   font-weight: 500;
@@ -230,7 +237,7 @@ body {
 /* Root variables */
 .en-lang {
   --font-family-Arial: Arial Black;
-  --font-family-DIN: DIN Alternate;
+  --font-family-DIN: din alternate;
 
   /* Root for Nav Web */
   --font-nav-weight: 700;
