@@ -2,7 +2,7 @@
   font-family: din alternate;
   font-style: normal;
   font-weight: 700;
-  src: local("DIN Alternate"), url(https://fonts.cdnfonts.com/s/14503/DINAlternate-Bold.woff) format("woff");
+  src: url("./DINAlternate-Bold.woff") format("woff");
 }
 
 @font-face {
