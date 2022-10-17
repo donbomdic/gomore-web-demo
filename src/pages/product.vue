@@ -65,8 +65,8 @@
             <div class="section2-carousel">
               <img v-show="isMobile === 1" src="./assets/product-carousell1-mobile.png" alt="carousel1-1-mobile" />
               <img v-show="isMobile === 0" src="./assets/product-carousell1.png" alt="carousel1-1" />
-              <img src="./assets/product-carousell2.png" alt="carousel1-2" />
-              <img src="./assets/product-carousell2.png" alt="carousel1-3" />
+              <img @click="carouselClick(1)" src="./assets/product-carousell2.png" alt="carousel1-2" />
+              <img @click="carouselClick(2)" src="./assets/product-carousell2.png" alt="carousel1-3" />
             </div>
             <div class="section2-card">
               <img
@@ -118,10 +118,10 @@
           <!-- Card 2 -->
           <div class="section2-card-container">
             <div class="section2-carousel">
-              <img src="./assets/product-carousell2.png" alt="carousel2-1" />
+              <img @click="carouselClick(0)" src="./assets/product-carousell2.png" alt="carousel2-1" />
               <img v-show="isMobile === 1" src="./assets/product-carousell1-mobile.png" alt="carousel2-2-mobile" />
               <img v-show="isMobile === 0" src="./assets/product-carousell1.png" alt="carousel2-2" />
-              <img src="./assets/product-carousell2.png" alt="carousel2-3" />
+              <img @click="carouselClick(2)" src="./assets/product-carousell2.png" alt="carousel2-3" />
             </div>
             <div class="section2-card">
               <img
@@ -169,8 +169,8 @@
           <!-- Card 3 -->
           <div class="section2-card-container">
             <div class="section2-carousel">
-              <img src="./assets/product-carousell2.png" alt="carousel3-1" />
-              <img src="./assets/product-carousell2.png" alt="carousel3-2" />
+              <img @click="carouselClick(0)" src="./assets/product-carousell2.png" alt="carousel3-1" />
+              <img @click="carouselClick(1)" src="./assets/product-carousell2.png" alt="carousel3-2" />
               <img v-show="isMobile === 1" src="./assets/product-carousell1-mobile.png" alt="carousel3-3-mobile" />
               <img v-show="isMobile === 0" src="./assets/product-carousell1.png" alt="carousel3-3" />
             </div>
@@ -281,6 +281,39 @@ export default {
       }
     }
 
+    function carouselClick(num) {
+      if (count.value === 0) {
+        if (num === 1) {
+          scrolled.value.scrollLeft += scrolled.value.scrollWidth / 3;
+          count.value = 1;
+        }
+        if (num === 2) {
+          scrolled.value.scrollLeft += (scrolled.value.scrollWidth / 3) * 2;
+          count.value = 2;
+        }
+      }
+      if (count.value === 1) {
+        if (num === 0) {
+          scrolled.value.scrollLeft -= scrolled.value.scrollWidth / 3;
+          count.value = 0;
+        }
+        if (num === 2) {
+          scrolled.value.scrollLeft += scrolled.value.scrollWidth / 3;
+          count.value = 2;
+        }
+      }
+      if (count.value === 2) {
+        if (num === 0) {
+          scrolled.value.scrollLeft -= (scrolled.value.scrollWidth / 3) * 2;
+          count.value = 0;
+        }
+        if (num === 1) {
+          scrolled.value.scrollLeft -= scrolled.value.scrollWidth / 3;
+          count.value = 1;
+        }
+      }
+    }
+
     function carouselCount(num) {
       if (num === -1 && count.value > 0) {
         count.value -= 1;
@@ -290,7 +323,6 @@ export default {
         count.value += 1;
         scrolled.value.scrollLeft += scrolled.value.scrollWidth / 3;
       }
-      console.log(count.value);
     }
 
     function handleScroll() {
@@ -305,7 +337,7 @@ export default {
       }
     }
 
-    return { isMobile, count, cardWrapper, resizeEventHandler, carouselCount, handleScroll };
+    return { isMobile, count, cardWrapper, resizeEventHandler, carouselCount, handleScroll, carouselClick };
   },
   created() {
     window.addEventListener("resize", this.resizeEventHandler);
@@ -415,7 +447,6 @@ export default {
         margin: 130px 0px 116px 0px;
         background-image: linear-gradient(#810000cc, #810000cc), url("./assets/product-seperator2.png");
       }
-
       .section2-container {
         max-width: 1366px;
         width: 100%;
@@ -454,12 +485,12 @@ export default {
           // overscroll-behavior-inline: contain;
           scroll-snap-type: x mandatory;
           .section2-card-container {
+            margin: 0 auto;
             scroll-snap-align: center;
             position: relative;
             max-width: 1100px;
             width: 100%;
             height: 650px;
-            margin: 0 auto;
             background: #f4f4f4;
             box-shadow: 2px 5px 8px rgba(64, 64, 64, 0.25);
             border-radius: 25px;
@@ -477,9 +508,11 @@ export default {
               align-items: center;
               img {
                 margin: 2px;
+                cursor: pointer;
               }
             }
             .section2-card {
+              margin: 0 auto;
               display: flex;
               align-items: center;
               height: 100%;
