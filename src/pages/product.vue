@@ -550,10 +550,6 @@ export default {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     margin-bottom: 32px;
-                    .content3-2 {
-                      // grid-row-start: 1;
-                      // grid-row-end: 1;
-                    }
                     .content3-3 {
                       grid-row-start: 1;
                       grid-row-end: 3;
