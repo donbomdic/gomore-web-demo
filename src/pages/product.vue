@@ -194,8 +194,8 @@
                     {{ $t("product.section2.card.content3-1") }}
                   </div>
                   <ul>
-                    <li>{{ $t("product.section2.card.content3-2") }}</li>
-                    <li>{{ $t("product.section2.card.content3-3") }}</li>
+                    <li class="content3-2">{{ $t("product.section2.card.content3-2") }}</li>
+                    <li class="content3-3">{{ $t("product.section2.card.content3-3") }}</li>
                     <li>{{ $t("product.section2.card.content3-4") }}</li>
                     <li>{{ $t("product.section2.card.content3-5") }}</li>
                     <li>{{ $t("product.section2.card.content3-6") }}</li>
@@ -226,7 +226,8 @@
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon2.png" alt="signal2" />
-            <div class="section3-card-content">{{ $t("product.section3.card.title2") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title2-1") }}</div>
+            <div class="section3-card-content">{{ $t("product.section3.card.title2-2") }}</div>
           </div>
           <div class="section3-card">
             <img src="./assets/product-icon3.png" alt="signal3" />
@@ -547,8 +548,16 @@ export default {
                   ul {
                     list-style-type: disc;
                     display: grid;
-                    grid-template-columns: 50% 50%;
+                    grid-template-columns: repeat(2, 1fr);
                     margin-bottom: 32px;
+                    .content3-2 {
+                      // grid-row-start: 1;
+                      // grid-row-end: 1;
+                    }
+                    .content3-3 {
+                      grid-row-start: 1;
+                      grid-row-end: 3;
+                    }
                     li {
                       margin-right: 10px;
                       font-family: var(--font-family-DIN);

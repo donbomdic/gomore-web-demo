@@ -140,7 +140,8 @@
       "title2": "Signal Indicators",
       "card": {
         "title1": "Heart rate",
-        "title2": "Resting heart rate",
+        "title2-1": "Resting",
+        "title2-2": "heart rate",
         "title3": "Heart rate variability",
         "title4": "ACC speed",
         "title5": "GPS speed",
