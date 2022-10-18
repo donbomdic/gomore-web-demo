@@ -139,12 +139,12 @@
       "content2": "這些生理訊號包括以光體積變化描記圖法（PPG）、加速度感測器（ACC）、陀螺儀（Gyro）以及心電圖（ECG）所收集來自人體活動的許多數據。",
       "title2": "訊號指標",
       "card": {
-        "title1": "心率估計",
-        "title2-1": "安靜心率估計",
+        "title1": "心率",
+        "title2-1": "安靜心率",
         "title2-2": "",
         "title3": "心率變異性",
-        "title4": "ACC 速度估測",
-        "title5": "GPS 速度估測",
+        "title4": "ACC 速度",
+        "title5": "GPS 速度",
         "title6": "配速",
         "title7": "步頻"
       }

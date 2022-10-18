@@ -1,8 +1,7 @@
 <template>
   <div class="nav-main">
     <div class="logo">
-      <!-- <a href="https://www.gomore.me/en/"> -->
-      <router-link :to="'/' + $i18n.locale + '/official'">
+      <a href="https://www.gomore.me/en/">
         <svg width="150" height="25" viewBox="0 0 150 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_136_1332)">
             <path
@@ -60,8 +59,7 @@
             </clipPath>
           </defs>
         </svg>
-      </router-link>
-      <!-- </a> -->
+      </a>
       <img v-show="navMenu === false" @click="navMenu = true" class="menu" src="./asset/Icon.png" alt="menu" />
       <img
         v-show="navMenu === true"
@@ -73,7 +71,7 @@
     </div>
     <!-- Width > 959 Navigation Bar -->
     <div v-show="size > 959" class="nav-item" @mouseleave="(hoverNav = false), (hoverNav2 = false)">
-      <router-link :to="'/' + $i18n.locale + '/product'" @mouseenter="(hoverNav = true), (hoverNav2 = false)">{{
+      <router-link :to="'/' + $i18n.locale" @mouseenter="(hoverNav = true), (hoverNav2 = false)">{{
         $t("navbar.title1")
       }}</router-link>
       <div v-show="hoverNav === true" class="nav-item-product-wrapper">
@@ -83,9 +81,9 @@
           @mouseenter="(hoverNav = true), (hoverNav2 = false)"
           @mouseleave="hoverNav = false"
         >
-          <router-link :to="'/' + $i18n.locale + '/product/#section1'">{{ $t("navbar.content1-1") }} </router-link>
-          <router-link :to="'/' + $i18n.locale + '/product/#section2'">{{ $t("navbar.content1-2") }}</router-link>
-          <router-link :to="'/' + $i18n.locale + '/product/#section3'">{{ $t("navbar.content1-3") }}</router-link>
+          <router-link :to="'/' + $i18n.locale + '/#section1'">{{ $t("navbar.content1-1") }} </router-link>
+          <router-link :to="'/' + $i18n.locale + '/#section2'">{{ $t("navbar.content1-2") }}</router-link>
+          <router-link :to="'/' + $i18n.locale + '/#section3'">{{ $t("navbar.content1-3") }}</router-link>
         </div>
       </div>
       <router-link :to="'/' + $i18n.locale + '/commercial'" @mouseenter="(hoverNav2 = true), (hoverNav = false)">{{
@@ -117,7 +115,7 @@
     <div v-show="size <= 959 && navMenu === true" class="nav-item">
       <div class="nav-item-wrapper">
         <div class="nav-item-title">
-          <router-link :to="'/' + $i18n.locale + '/product'">{{ $t("navbar.title1") }} </router-link>
+          <router-link :to="'/' + $i18n.locale">{{ $t("navbar.title1") }} </router-link>
           <img
             @click="isProductSection = !isProductSection"
             :class="{ 'section-open': isProductSection }"
@@ -126,9 +124,9 @@
           />
         </div>
         <div v-show="isProductSection" class="nav-item-section-wrapper">
-          <router-link :to="'/' + $i18n.locale + '/product/#section1'">{{ $t("navbar.content1-1") }} </router-link>
-          <router-link :to="'/' + $i18n.locale + '/product/#section2'">{{ $t("navbar.content1-2") }}</router-link>
-          <router-link :to="'/' + $i18n.locale + '/product/#section3'">{{ $t("navbar.content1-3") }}</router-link>
+          <router-link :to="'/' + $i18n.locale + '/#section1'">{{ $t("navbar.content1-1") }} </router-link>
+          <router-link :to="'/' + $i18n.locale + '/#section2'">{{ $t("navbar.content1-2") }}</router-link>
+          <router-link :to="'/' + $i18n.locale + '/#section3'">{{ $t("navbar.content1-3") }}</router-link>
         </div>
       </div>
       <div class="nav-item-wrapper">

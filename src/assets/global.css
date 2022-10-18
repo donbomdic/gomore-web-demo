@@ -28,6 +28,8 @@ body {
   --font-family-Arial: GenYoGothic JP;
   --font-family-DIN: GenYoGothic JP;
 
+  --product-section2-card3-content3-3: 1;
+
   /*zh lang for  Nav Web */
   --font-nav-weight: 500;
   --font-nav-line-height: 20px;
@@ -238,6 +240,8 @@ body {
 .en-lang {
   --font-family-Arial: Arial Black;
   --font-family-DIN: din alternate;
+
+  --product-section2-card3-content3-3: 3;
 
   /* Root for Nav Web */
   --font-nav-weight: 700;

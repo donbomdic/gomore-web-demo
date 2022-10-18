@@ -194,7 +194,7 @@
                     {{ $t("product.section2.card.content3-1") }}
                   </div>
                   <ul>
-                    <li class="content3-2">{{ $t("product.section2.card.content3-2") }}</li>
+                    <li>{{ $t("product.section2.card.content3-2") }}</li>
                     <li class="content3-3">{{ $t("product.section2.card.content3-3") }}</li>
                     <li>{{ $t("product.section2.card.content3-4") }}</li>
                     <li>{{ $t("product.section2.card.content3-5") }}</li>
@@ -551,8 +551,9 @@ export default {
                     grid-template-columns: repeat(2, 1fr);
                     margin-bottom: 32px;
                     .content3-3 {
+                      grid-column-start: 2;
                       grid-row-start: 1;
-                      grid-row-end: 3;
+                      grid-row-end: var(--product-section2-card3-content3-3);
                     }
                     li {
                       margin-right: 10px;

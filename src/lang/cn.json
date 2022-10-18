@@ -139,12 +139,12 @@
       "content2": "这些生理讯号包括以光体积变化描记图法（PPG）、加速度感测器（ACC）、陀螺仪（Gyro）以及心电图（ECG）所收集来自人体活动的许多数据。",
       "title2": "讯号指标",
       "card": {
-        "title1": "心率估计",
-        "title2-1": "静息心率估计",
+        "title1": "心率",
+        "title2-1": "静息心率",
         "title2-2": "",
         "title3": "心率变异性",
-        "title4": "ACC 速度估测",
-        "title5": "GPS 速度估测",
+        "title4": "ACC 速度",
+        "title5": "GPS 速度",
         "title6": "配速",
         "title7": "步频"
       }
